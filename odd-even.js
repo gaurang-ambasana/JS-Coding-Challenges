@@ -5,7 +5,7 @@
 // Directly Number % 2 == 0 -> EVEN
 // Directly Number % 2 != 0 -> ODD
 
-// function check if number is odd
+// function to check if number is odd
 const isOdd = (number) => {
   return Number(number) % 2 !== 0;
 };
