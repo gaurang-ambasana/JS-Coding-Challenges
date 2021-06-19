@@ -1,6 +1,7 @@
 //sum(a,b)(c,d)(e,f)
 //should return a * c * e + b * d * f
 
+//higher order function.. returns 3 times
 const example = (a, b) => {
   return function (c, d) {
     return function (e, f) {
