@@ -6,7 +6,8 @@
 // Trickling : grandParent -> parent -> child event order
 
 // In this code you can see we can pass third argument to addEventListner function
-// which is useCapture flag which false by default so you will see event on child being called first
+// which is useCapture flag which is false by default so you will see event on child being called first
+// So by default events are bubbled out
 
 document.getElementById("grandParent").addEventListener(
   "click", // on click event
