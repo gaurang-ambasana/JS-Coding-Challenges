@@ -42,4 +42,8 @@ console.log(add(6, 5, 5, 5, 5, 5, 5)); // -> 36
 console.log(add(4, 5, 8)); // -> 17
 
 // Works like a charm here as well
-// Always use TypeScript to avoid data type related Erros :)
+
+console.log(add("Hello ", "World", 52)); // Will cause a problem right?
+console.log(multiply("Hello", "Hey!", 162)); // This will also cause a problem, correct?
+
+// Always use TypeScript to avoid data type related Errors :)
