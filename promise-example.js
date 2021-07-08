@@ -5,7 +5,7 @@ const sleep = (x) => {
 const logger = async () => {
   for (let i = 0; i <= 3; i++) {
     if (i === 0) {
-      console.log("Start");
+      console.log("Start Logger");
     } else {
       await sleep(i * 1000);
       console.log(i);
