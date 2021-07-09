@@ -3,8 +3,8 @@
 
 //higher order function.. returns 3 times
 const example = (a, b) => {
-  return function (c, d) {
-    return function (e, f) {
+  return (c, d) => {
+    return (e, f) => {
       return (
         Number(a) * Number(c) * Number(e) + Number(b) * Number(d) * Number(f)
       );
