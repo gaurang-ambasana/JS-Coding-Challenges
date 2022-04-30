@@ -7,12 +7,13 @@ var countLargestGroup = function(n) {
     const res = {};
     
     for (let i = 1; i <= n; i++) {
-        if (res[getDigitSum(i)]) res[getDigitSum(i)].push(i);
-        else res[getDigitSum(i)] = [i];
+        const sum = getDigitSum(i);
+        if (res[sum]) res[sum].push(i);
+        else res[sum] = [i];
     }
     
-    const groups = Object.values(res);
-    const maxGroupSize = Math.max(...groups.map(arr => arr.length));
+    const groupSize = Object.values(res).map(arr => arr.length);
+    const maxGroupSize = Math.max(...groupSize);
     
-    return groups.filter(arr => arr.length === maxGroupSize).length;
+    return groupSize.filter(size => size === maxGroupSize).length;
 };
