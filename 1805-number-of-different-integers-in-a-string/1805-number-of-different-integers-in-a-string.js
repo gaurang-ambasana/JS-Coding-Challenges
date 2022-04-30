@@ -14,6 +14,6 @@ var numDifferentIntegers = function(word) {
             }
         } else num += word[i].toString();
     }
-    console.log(nums);
+    
     return nums.length;
 };
