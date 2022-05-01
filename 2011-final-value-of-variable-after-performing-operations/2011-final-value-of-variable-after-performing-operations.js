@@ -4,6 +4,6 @@
  */
 var finalValueAfterOperations = function(operations) {
     let X = 0;
-    operations.forEach(o => eval(o));
+    for (let i = 0; i < operations.length; i++) eval(operations[i]);
     return X;
 };
