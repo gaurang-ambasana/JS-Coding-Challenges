@@ -10,9 +10,11 @@ const checkAlmostEquivalent = (word1, word2) => {
     
     return Object.entries(freqOfWord1).every(([key, value]) => 
         key in freqOfWord2 ? 
-            Math.abs(freqOfWord2[key] - value) < 4 : value < 4
+            Math.abs(freqOfWord2[key] - value) < 4 : 
+            value < 4
     ) && Object.entries(freqOfWord2).every(([key, value]) => 
         key in freqOfWord1 ?
-            Math.abs(freqOfWord1[key] - value) < 4 : value < 4
+            Math.abs(freqOfWord1[key] - value) < 4 : 
+            value < 4
     );
 };
