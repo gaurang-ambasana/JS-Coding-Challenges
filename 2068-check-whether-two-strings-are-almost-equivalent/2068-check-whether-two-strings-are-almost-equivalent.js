@@ -4,6 +4,7 @@
  * @return {boolean}
  */
 const checkAlmostEquivalent = (word1, word2) => {
+    const getFreqOfWord = (word) => word.split('').reduce((a, char) => (a[char] = a[char] ? ++a[char] : 1, a), {});
     const freqOfWord1 = getFreqOfWord(word1);
     const freqOfWord2 = getFreqOfWord(word2);
     
@@ -19,5 +20,3 @@ const checkAlmostEquivalent = (word1, word2) => {
         } else return value < 4;
     });
 };
-
-const getFreqOfWord = (word) => word.split('').reduce((a, char) => (a[char] = a[char] ? ++a[char] : 1, a), {});
