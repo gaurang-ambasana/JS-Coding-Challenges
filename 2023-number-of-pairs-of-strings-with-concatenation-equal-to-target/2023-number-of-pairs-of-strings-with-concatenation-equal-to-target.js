@@ -12,5 +12,6 @@ var numOfPairs = function(nums, target) {
         if(target.startsWith(num) && map[str]) count += map[str]
         map[num]++
     }
+    console.log(map);
     return count 
 };
