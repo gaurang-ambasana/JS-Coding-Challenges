@@ -1,20 +1,16 @@
-/**
- * @param {string[]} nums
- * @param {string} target
- * @return {number}
- */
 var numOfPairs = function(nums, target) {
+    let map = {}
     let count = 0;
-    let start = 0;
-    
-    while (start < nums.length) {
-        for (let i = 0; i < nums.length; i++) {
-            if(i !== start) {
-                (nums[i] + nums[start]) === target && ++count;
-            }
-        }
-        ++start;
+  
+    for(const num of nums){
+        if(map[num]) map[num]++
+        else map[num] = 1
     }
-    
-    return count;
+    for(let num of nums){
+        const str = target.substring(num.length)
+        map[num]--
+        if(target.startsWith(num) && map[str]) count += map[str]
+        map[num]++
+    }
+    return count 
 };
