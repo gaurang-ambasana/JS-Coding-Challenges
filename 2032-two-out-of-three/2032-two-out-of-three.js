@@ -9,5 +9,5 @@ var twoOutOfThree = function(nums1, nums2, nums3) {
         (nums1.includes(val) && nums2.includes(val)) || 
         (nums3.includes(val) && nums2.includes(val)) || 
         (nums1.includes(val) && nums3.includes(val)))
-    return Array.from(new Set(common));
+    return [...new Set(common)];
 };
