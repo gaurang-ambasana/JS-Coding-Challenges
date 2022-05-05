@@ -12,10 +12,10 @@ var findShortestSubArray = function(nums) {
         return acc;
     }, {});
     
-    Object.entries(freq).map(([key, val]) => [parseInt(key), val])
+    Object.entries(freq)
         .filter(([_, val]) => val === degree)
         .forEach(([key, _]) => 
-          minLen = Math.min(minLen, nums.lastIndexOf(key) - nums.indexOf(key) + 1)
+          minLen = Math.min(minLen, nums.lastIndexOf(parseInt(key)) - nums.indexOf(parseInt(key)) + 1)
          );
     
     return minLen;
