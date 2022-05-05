@@ -7,7 +7,7 @@ var findShortestSubArray = function(nums) {
     let minLen = Infinity;
     
     const freq = nums.reduce((acc, num) => {
-        acc[num] = acc[num] ? ++acc[num] : 1;
+        acc[num] = (acc[num] ?? 0) + 1;
         degree = Math.max(acc[num], degree);
         return acc;
     }, {});
