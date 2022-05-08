@@ -8,7 +8,8 @@ var maxProfit = function(prices) {
     for (let i = 1; i < prices.length ; i++) {
         const right = prices[i];
         if (left > right) left = right;
-        if (right - left > profit) profit = right - left;
+        const currentProfit = right - left;
+        if (currentProfit > profit) profit = currentProfit;
     }
     
     return profit;
