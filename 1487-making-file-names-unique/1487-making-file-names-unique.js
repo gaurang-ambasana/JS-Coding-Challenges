@@ -3,12 +3,27 @@
  * @return {string[]}
  */
 var getFolderNames = function(names) {
-    const acts = new Map();
-  for (const n of names)
-    if (!acts.has(n)) acts.set(n, 1);
-    else {
-      while (acts.has(`${n}(${acts.get(n)})`)) acts.set(n, acts.get(n) + 1);
-      acts.set(`${n}(${acts.get(n)})`, 1);
+    const map = {};
+    const res = [];
+    
+    for (const folderName of names) {
+        if (folderName in map) {
+            let k = map[folderName];
+            let name = `${folderName}(${k})`;
+            
+            while(name in map) {
+                k += 1;
+                name = `${folderName}(${k})`;
+            }
+            
+            res.push(name);
+            map[name] = 1;
+            ++map[folderName];
+        } else {
+            map[folderName] = 1;
+            res.push(folderName);
+        }
     }
-  return [...acts.keys()];
+    
+    return res;
 };
