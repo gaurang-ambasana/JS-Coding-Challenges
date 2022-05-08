@@ -16,9 +16,9 @@ var getFolderNames = function(names) {
                 name = `${folderName}(${k})`;
             }
             
-            res.push(name);
             map[name] = 1;
-            ++map[folderName];
+            map[folderName]++;
+            res.push(name);
         } else {
             map[folderName] = 1;
             res.push(folderName);
