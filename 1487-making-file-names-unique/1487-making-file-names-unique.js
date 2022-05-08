@@ -12,7 +12,7 @@ var getFolderNames = function(names) {
             let name = `${folderName}(${k})`;
             
             while(name in map) {
-                k += 1;
+                k++;
                 name = `${folderName}(${k})`;
             }
             
