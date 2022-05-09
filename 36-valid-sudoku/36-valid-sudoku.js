@@ -2,7 +2,7 @@
  * @param {character[][]} board
  * @return {boolean}
  */
-var isValidSudoku = function (board) {
+const isValidSudoku = (board) => {
   const isValidRow = (row) => Object.values(row.reduce((acc, n) => {
       if (n !== ".") acc[n] = (acc[n] ?? 0) + 1;
       return acc;
