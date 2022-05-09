@@ -3,6 +3,4 @@
  * @param {number} target
  * @return {boolean}
  */
-var searchMatrix = function(matrix, target) {
-    return matrix.findIndex(row => row.includes(target)) > -1;
-};
+const searchMatrix = (matrix, target) => matrix.find(row => row.includes(target)) !== undefined;
