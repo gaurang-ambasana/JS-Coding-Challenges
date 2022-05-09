@@ -5,7 +5,7 @@
 const isValidRow = (row) => Object.values(row.reduce((acc, n) => {
       if (n !== ".") acc[n] = (acc[n] ?? 0) + 1;
       return acc;
-    }, {})).every((val) => val < 2);
+    }, {})).every((val) => val <= 1);
 
 const isValidSudoku = (board) => {    
   for (const row of board)
