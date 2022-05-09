@@ -3,6 +3,11 @@
  * @return {boolean}
  */
 var isValidSudoku = function (board) {
+  const isValidRow = (row) => Object.values(row.reduce((acc, n) => {
+      if (n !== ".") acc[n] = (acc[n] ?? 0) + 1;
+      return acc;
+  }, {})).every((val) => val < 2);
+    
   for (let i = 0; i < board.length; i++)
       if (!isValidRow(board[i])) return false;
     
@@ -27,11 +32,3 @@ var isValidSudoku = function (board) {
     
   return true;
 };
-
-const isValidRow = (row) =>
-  Object.values(
-    row.reduce((a, n) => {
-      if (n !== ".") a[n] = (a[n] ?? 0) + 1;
-      return a;
-    }, {})
-  ).every((val) => val < 2);
