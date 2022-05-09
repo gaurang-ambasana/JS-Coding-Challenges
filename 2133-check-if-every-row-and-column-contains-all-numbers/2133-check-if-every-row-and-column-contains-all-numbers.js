@@ -3,8 +3,8 @@
  * @return {boolean}
  */
 var checkValid = function(matrix) {
-    let rows = new Set();
-    let cols = new Set();
+    const rows = new Set();
+    const cols = new Set();
     
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix.length; j++) {
