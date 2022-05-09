@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {boolean}
  */
-var checkValid = function(matrix) {
+const checkValid = (matrix) => {
     const rows = new Set();
     const cols = new Set();
     
@@ -11,11 +11,13 @@ var checkValid = function(matrix) {
             rows.add(matrix[i][j]);
             cols.add(matrix[j][i]);
         }
+        
         if (matrix.length !== rows.size || matrix.length !== cols.size) 
             return false;
         
         rows.clear();
         cols.clear();
     }
+    
     return true;
 };
