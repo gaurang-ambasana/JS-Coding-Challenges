@@ -5,7 +5,7 @@
 const isValidRow = (row) => Object.values(row.reduce((acc, n) => {
       if (n !== ".") acc[n] = (acc[n] ?? 0) + 1;
       return acc;
-    }, {})).every((val) => val <= 1);
+    }, {})).every(val => val <= 1);
 
 const isValidSudoku = (board) => {    
   for (const row of board)
@@ -29,6 +29,6 @@ const isValidSudoku = (board) => {
     while (group.length !== 0)
       if (!isValidRow([].concat(...group.splice(0, 3)))) 
           return false;
-    
+
   return true;
 };
