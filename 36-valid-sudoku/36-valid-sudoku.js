@@ -8,16 +8,16 @@ var isValidSudoku = function (board) {
       return acc;
   }, {})).every((val) => val < 2);
     
-  for (let i = 0; i < board.length; i++)
-      if (!isValidRow(board[i])) return false;
+  for (const row of board)
+      if (!isValidRow(row)) return false;
     
   const columns = board.reduce((acc, row) => {
       row.forEach((e, i) => (acc[i] ? acc[i].push(e) : (acc[i] = [e])));
       return acc;
     }, []);
     
-  for (let i = 0; i < columns.length; i++)
-      if (!isValidRow(columns[i])) return false;
+  for (const column of columns)
+      if (!isValidRow(column)) return false;
   
   const threeCols = board.reduce((acc, row) => {
     for (let i = 0; i < 3; i++)
@@ -25,9 +25,9 @@ var isValidSudoku = function (board) {
     return acc;
   }, []);
 
-  for (let i = 0; i < threeCols.length; i++)
-    while (threeCols[i].length !== 0)
-      if (!isValidRow([].concat(...threeCols[i].splice(0, 3)))) 
+  for (const group of threeCols)
+    while (group.length !== 0)
+      if (!isValidRow([].concat(...group.splice(0, 3)))) 
           return false;
     
   return true;
