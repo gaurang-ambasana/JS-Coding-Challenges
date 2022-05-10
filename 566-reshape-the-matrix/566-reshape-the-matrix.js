@@ -6,7 +6,6 @@
  */
 var matrixReshape = function(mat, r, c) {
     const flatArr = mat.flat();
-    if (r === 1) return [flatArr];
     if (flatArr.length !== r*c) return mat;
     
     const res = [];
