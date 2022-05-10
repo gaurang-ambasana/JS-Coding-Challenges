@@ -3,7 +3,7 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
+const isAnagram = (s, t) => {
     const getFreq = (str) => str.split('').reduce((acc, char) => (acc[char] = (acc[char] ?? 0) + 1, acc), {});
                                                   
     const freqOfS = getFreq(s);
