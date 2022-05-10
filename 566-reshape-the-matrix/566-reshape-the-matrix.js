@@ -1,0 +1,18 @@
+/**
+ * @param {number[][]} mat
+ * @param {number} r
+ * @param {number} c
+ * @return {number[][]}
+ */
+var matrixReshape = function(mat, r, c) {
+    const flatArr = mat.flat();
+    if (r === 1) return [flatArr];
+    if (flatArr.length !== r*c) return mat;
+    
+    const res = [];
+    
+    for(let i = 0; i < r; i++)
+        res.push(flatArr.splice(0, c));
+    
+    return res;
+};
