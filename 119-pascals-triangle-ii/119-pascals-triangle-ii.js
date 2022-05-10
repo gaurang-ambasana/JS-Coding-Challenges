@@ -2,7 +2,7 @@
  * @param {number} rowIndex
  * @return {number[]}
  */
-const getRow = function(rowIndex) {
+const getRow = (rowIndex) => {
     const res = [];
     
     for (let i = 0; i <= rowIndex; i++) {
@@ -13,5 +13,6 @@ const getRow = function(rowIndex) {
         }
         res.push(temp);
     }
+    
     return res[rowIndex];
 };
