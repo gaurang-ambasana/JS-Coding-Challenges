@@ -2,7 +2,7 @@
  * @param {number} rowIndex
  * @return {number[]}
  */
-var getRow = function(rowIndex) {
+const getRow = function(rowIndex) {
     const res = [];
     
     for (let i = 0; i <= rowIndex; i++) {
