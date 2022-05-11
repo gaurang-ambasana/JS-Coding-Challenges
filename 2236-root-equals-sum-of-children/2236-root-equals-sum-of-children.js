@@ -10,4 +10,4 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const checkTree = (root) => root.val === root.left.val + root.right.val;
+const checkTree = root => root.val === root.left.val + root.right.val;
