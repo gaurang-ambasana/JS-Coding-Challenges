@@ -9,7 +9,7 @@ const isPrefixString = (s, words) => {
     for (let i = 0; i < words.length; i++) {
         str += words[i];
         if (str === s) return true;
-        if (str.length > s.length) return false;
+        if (str.length > s.length) break;
     }
     
     return false;
