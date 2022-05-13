@@ -3,7 +3,7 @@
  * @param {string[]} words
  * @return {boolean}
  */
-var isPrefixString = function(s, words) {
+const isPrefixString = (s, words) => {
     let flag = false;
     
     words.reduce((final, current) => {
@@ -11,8 +11,8 @@ var isPrefixString = function(s, words) {
         else {
             final += current;
             if (final === s) flag = true;
+            return final;
         }
-        return final;
     }, '');
     
     return flag;
