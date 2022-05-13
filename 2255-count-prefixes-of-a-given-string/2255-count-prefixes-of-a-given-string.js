@@ -3,4 +3,4 @@
  * @param {string} s
  * @return {number}
  */
-const countPrefixes = (words, s) => words.filter((word) => s.startsWith(word)).length;
+const countPrefixes = (words, s) => words.filter(word => s.startsWith(word)).length;
