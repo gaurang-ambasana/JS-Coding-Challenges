@@ -4,14 +4,13 @@
  * @return {boolean}
  */
 const isPrefixString = (s, words) => {
-    let flag = false;
+    let str = '';
     
-    words.reduce((final, current) => {
-        if (flag) return final;
-        final += current;
-        if (final === s) flag = true;
-        return final;
-    }, '');
+    for (let i = 0; i < words.length; i++) {
+        str += words[i];
+        if (str === s) return true;
+        if (str.length > s.length) return false;
+    }
     
-    return flag;
+    return false;
 };
