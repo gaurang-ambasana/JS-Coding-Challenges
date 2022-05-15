@@ -17,12 +17,12 @@ const validIPAddress = (queryIP) => {
     const ipv6 = () => {
         const x = queryIP.split(':');
         if (x.length !== 8) return false;
-        const allowedStr = '0123456789abcdef';
+        const allowed = '0123456789abcdef';
         for (let i = 0; i < x.length; i++) {
             if (1 <= x[i].length && 
                 x[i].length <= 4 &&
                 x[i].toLowerCase().split('')
-                .every(c => allowedStr.includes(c))) continue;
+                .every(c => allowed.includes(c))) continue;
             return false;
         }     
         return true;
