@@ -18,7 +18,7 @@ const isIpv4 = (IP) => {
 };
 
 const isIpv6 = (IP) => {
-    const x = IP.split(':').map(x => x.toLowerCase());
+    const x = IP.split(':').map(s => s.toLowerCase());
     
     if (x.length !== 8) return false;
         
@@ -27,7 +27,7 @@ const isIpv6 = (IP) => {
     for (let i = 0; i < x.length; i++) {
         if (1 <= x[i].length && x[i].length <= 4 && 
             x[i].split('')
-            .every(c => range.includes(c))) continue;
+            .every(s => range.includes(s))) continue;
         
         return false;
     }     
