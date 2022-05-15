@@ -18,7 +18,7 @@ const ipv4 = (IP) => {
 };
 
 const ipv6 = (IP) => {
-    const x = IP.split(':');
+    const x = IP.split(':').map(x => x.toLowerCase());
     
     if (x.length !== 8) return false;
         
@@ -26,7 +26,7 @@ const ipv6 = (IP) => {
         
     for (let i = 0; i < x.length; i++) {
         if (1 <= x[i].length && x[i].length <= 4 && 
-            x[i].toLowerCase().split('')
+            x[i].split('')
             .every(c => allowed.includes(c))) continue;
         
         return false;
