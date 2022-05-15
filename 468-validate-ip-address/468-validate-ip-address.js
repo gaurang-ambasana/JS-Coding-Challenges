@@ -12,7 +12,7 @@ const validIPAddress = (queryIP) => {
             return false;
         }
         
-        return "IPv4";
+        return true;
     };
     
     const ipv6 = () => {
@@ -27,11 +27,11 @@ const validIPAddress = (queryIP) => {
             return false;
         }
         
-        return "IPv6";
+        return true;
     }
     
     const ip4 = ipv4();
     const ip6 = ipv6();
     
-    return ip4 ? ip4 : ip6 ? ip6 : "Neither";
+    return ip4 ? "IPv4" : ip6 ? "IPv6" : "Neither";
 };
