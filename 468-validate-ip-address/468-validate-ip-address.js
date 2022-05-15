@@ -7,11 +7,10 @@ const validIPAddress = (queryIP) => {
         const x = queryIP.split('.');
         if (x.length !== 4) return false;
         for (let i = 0; i < x.length; i++) {
-            if (x[i] <= 255 && 0 <= x[i] && Number(x[i]).toString() === x[i])
+            if (x[i] <= 255 && 0 <= x[i] && parseInt(x[i]).toString() === x[i])
                 continue;
             return false;
-        }
-        
+        }     
         return true;
     };
     
@@ -25,8 +24,7 @@ const validIPAddress = (queryIP) => {
                 x[i].toLowerCase().split('')
                 .every(c => allowedStr.includes(c))) continue;
             return false;
-        }
-        
+        }     
         return true;
     }
     
