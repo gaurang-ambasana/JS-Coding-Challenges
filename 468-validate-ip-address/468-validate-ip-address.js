@@ -8,7 +8,7 @@ const ipv4 = (IP) => {
     if (x.length !== 4) return false;
     
     for (let i = 0; i < x.length; i++) {
-        if (x[i] <= 255 && 0 <= x[i] && parseInt(x[i]).toString() === x[i])
+        if (x[i] <= 255 && 0 <= x[i] && Number(x[i]).toString() === x[i])
             continue;
         
         return false;
