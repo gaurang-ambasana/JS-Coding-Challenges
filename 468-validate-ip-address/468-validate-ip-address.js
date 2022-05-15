@@ -2,7 +2,7 @@
  * @param {string} queryIP
  * @return {string}
  */
-const ipv4 = (IP) => {
+const isIpv4 = (IP) => {
     const x = IP.split('.');
     
     if (x.length !== 4) return false;
@@ -17,7 +17,7 @@ const ipv4 = (IP) => {
     return true;
 };
 
-const ipv6 = (IP) => {
+const isIpv6 = (IP) => {
     const x = IP.split(':').map(x => x.toLowerCase());
     
     if (x.length !== 8) return false;
@@ -35,4 +35,4 @@ const ipv6 = (IP) => {
     return true;
 }
 
-const validIPAddress = (queryIP) => ipv4(queryIP) ? "IPv4" : ipv6(queryIP) ? "IPv6" : "Neither";
+const validIPAddress = (queryIP) => isIpv4(queryIP) ? "IPv4" : isIpv6(queryIP) ? "IPv6" : "Neither";
