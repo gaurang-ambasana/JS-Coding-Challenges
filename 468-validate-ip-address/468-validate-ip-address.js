@@ -22,12 +22,12 @@ const ipv6 = (IP) => {
     
     if (x.length !== 8) return false;
         
-    const allowed = '0123456789abcdef';
+    const range = '0123456789abcdef';
         
     for (let i = 0; i < x.length; i++) {
         if (1 <= x[i].length && x[i].length <= 4 && 
             x[i].split('')
-            .every(c => allowed.includes(c))) continue;
+            .every(c => range.includes(c))) continue;
         
         return false;
     }     
