@@ -4,7 +4,7 @@
  * @return {number}
  */
 const countWords = (words1, words2) => {
-    const getFreqOfArr = (arr) => arr.reduce((freq, word) => (freq[word] = (freq[word] ?? 0) + 1, freq), {});
+    const getFreqOfArr = arr => arr.reduce((freq, word) => (freq[word] = (freq[word] ?? 0) + 1, freq), {});
     
     const freqCounter1 = getFreqOfArr(words1);
     const freqCounter2 = getFreqOfArr(words2);
