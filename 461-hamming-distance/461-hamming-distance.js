@@ -4,7 +4,7 @@
  * @return {number}
  */
 const hammingDistance = (x, y) => {
-    let diff = 0;
+    let distance = 0;
     let bX = x.toString(2);
     let bY = y.toString(2);
     
@@ -15,7 +15,7 @@ const hammingDistance = (x, y) => {
     
     for (let i = 0; i < bX.length; i++)
         if (bX[i] !== bY[i])
-            diff++;
+            distance++;
     
-    return diff;
+    return distance;
 };
