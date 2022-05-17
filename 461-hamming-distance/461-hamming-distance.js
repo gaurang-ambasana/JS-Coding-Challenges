@@ -14,7 +14,8 @@ const hammingDistance = (x, y) => {
     }
     
     for (let i = 0; i < bX.length; i++)
-        if (bX[i] !== bY[i]) diff++;
+        if (bX[i] !== bY[i])
+            diff++;
     
     return diff;
 };
