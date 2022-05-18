@@ -4,8 +4,8 @@
  */
 const compress = chars => {
     const arr = [chars[0]];
-    
-    for (let i = 1; i < chars.length; i++) {
+    const x = chars.length;
+    for (let i = 1; i < x; i++) {
         const n = arr.length - 1;
         if (arr[n][0] !== chars[i]) arr.push(chars[i]);
         else arr[n] = arr[n].concat(chars[i]);
@@ -13,5 +13,5 @@ const compress = chars => {
     
     const str = arr.reduce((a, c) => c.length > 1 ? a.concat(c[0] + c.length) : a.concat(c), '');
     
-    chars.splice(0, chars.length, ...str.split(''))
+    chars.splice(0, x, ...str.split(''))
 };
