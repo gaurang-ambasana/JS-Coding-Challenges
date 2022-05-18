@@ -7,7 +7,8 @@ const wordPattern = (pattern, s) => {
     const sArr = s.split(' ');
     
     if (pattern.length !== sArr.length) return false;
-    if (new Set(pattern.split('')).size !== new Set(sArr).size) return false;
+    if (new Set(pattern.split('')).size !== new Set(sArr).size)
+        return false;
     
     const hash = {};
     
