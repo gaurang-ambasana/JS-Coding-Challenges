@@ -11,5 +11,7 @@ const compress = chars => {
         else arr[n] = arr[n].concat(chars[i]);
     }
     
-    chars.splice(0, chars.length, ...arr.reduce((a, c) => c.length > 1 ? a.concat(c[0] + c.length) : a.concat(c), '').split(''))
+    const str = arr.reduce((a, c) => c.length > 1 ? a.concat(c[0] + c.length) : a.concat(c), '');
+    
+    chars.splice(0, chars.length, ...str.split(''))
 };
