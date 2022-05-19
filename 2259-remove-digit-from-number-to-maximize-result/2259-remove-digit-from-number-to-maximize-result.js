@@ -4,7 +4,7 @@
  * @return {string}
  */
 const removeDigit = (number, digit) => {
-    let max = '0';
+    let maxNum = '0';
     
     for (const i in number) {
         const tmp = [...number];
@@ -13,9 +13,9 @@ const removeDigit = (number, digit) => {
             tmp.splice(i, 1);
             
             const curr = tmp.join(''); 
-            if (curr > max) max = curr;
+            if (curr > maxNum) maxNum = curr;
         }
     }
     
-    return max;
+    return maxNum;
 }
