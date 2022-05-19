@@ -6,7 +6,7 @@
 const removeDigit = (number, digit) => {
     let max = '0';
     
-    for (let i = 0; i < number.length; i++) {
+    for (const i in number) {
         const n = number[i];
         const temp = [...number];
         if (n === digit) {
