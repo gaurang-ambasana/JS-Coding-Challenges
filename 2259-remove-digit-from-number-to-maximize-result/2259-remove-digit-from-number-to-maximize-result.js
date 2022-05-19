@@ -11,7 +11,7 @@ const removeDigit = (number, digit) => {
         const temp = [...number];
         if (n === digit) {
             temp.splice(i, 1);
-            const curr = temp.join('')
+            const curr = temp.join('');
             if (curr > max)
                 max = curr;
         }
