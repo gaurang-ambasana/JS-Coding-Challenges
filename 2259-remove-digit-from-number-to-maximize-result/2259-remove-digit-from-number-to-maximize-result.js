@@ -7,10 +7,9 @@ const removeDigit = (number, digit) => {
     let max = '0';
     
     for (const i in number) {
-        const n = number[i];
         const temp = [...number];
         
-        if (n === digit) {
+        if (number[i] === digit) {
             temp.splice(i, 1);
             
             const curr = temp.join(''); 
