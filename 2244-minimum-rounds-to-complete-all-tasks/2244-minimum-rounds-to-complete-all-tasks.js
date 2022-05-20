@@ -4,7 +4,7 @@
  */
 var minimumRounds = function(tasks) {
     let rounds = 0;
-    const taskCounter = getFreq(tasks);
+    const taskCounter = tasks.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
     
     if (!Object.values(taskCounter).every(c => c > 1)) return -1;
     
@@ -20,10 +20,7 @@ var minimumRounds = function(tasks) {
                 }
             }
         }
-        console.log(taskCounter)
     }    
     
     return rounds;
 };
-
-const getFreq = (arr) => arr.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
