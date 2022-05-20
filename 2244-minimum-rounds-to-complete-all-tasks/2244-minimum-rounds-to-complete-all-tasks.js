@@ -7,7 +7,7 @@ var minimumRounds = function(tasks) {
     let rounds = 0;
     const taskCounter = tasks.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
     
-    if (!Object.values(taskCounter).every(c => c > 1)) return -1;
+    if (Object.values(taskCounter).some(c => c < 2)) return -1;
     
     while (Object.values(taskCounter).some(c => c > 0)) {
         for (const key in taskCounter) {
