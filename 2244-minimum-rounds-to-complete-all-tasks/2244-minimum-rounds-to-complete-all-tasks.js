@@ -2,7 +2,7 @@
  * @param {number[]} tasks
  * @return {number}
  */
-var minimumRounds = function(tasks) {
+const minimumRounds = tasks => {
     let rounds = 0;
     const taskCounter = tasks.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
     
