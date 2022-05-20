@@ -10,12 +10,14 @@ var minimumRounds = function(tasks) {
     
     while (Object.values(taskCounter).some(c => c > 0)) {
         for (const key in taskCounter) {
-            if (taskCounter[key] !== 0 && taskCounter[key] % 3 === 0) {
-                taskCounter[key] -= 3;
-                rounds++;
-            } else if (taskCounter[key] !== 0) {
-                taskCounter[key] -= 2;
-                rounds++;
+            if (taskCounter[key] !== 0) {
+                if (taskCounter[key] % 3 === 0) {
+                    taskCounter[key] -= 3;
+                    rounds++;
+                } else{ 
+                    taskCounter[key] -= 2;
+                    rounds++;
+                }
             }
         }
     }    
