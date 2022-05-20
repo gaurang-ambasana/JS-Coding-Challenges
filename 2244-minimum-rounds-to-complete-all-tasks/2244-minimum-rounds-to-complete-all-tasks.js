@@ -3,7 +3,6 @@
  * @return {number}
  */
 var minimumRounds = function(tasks) {
-    tasks.sort((a, b) => a - b);
     let rounds = 0;
     const taskCounter = tasks.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
     
