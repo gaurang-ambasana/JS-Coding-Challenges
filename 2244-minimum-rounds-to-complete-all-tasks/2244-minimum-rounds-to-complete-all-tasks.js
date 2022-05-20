@@ -3,7 +3,7 @@
  * @return {number}
  */
 const minimumRounds = tasks => {
-    let rounds = 0;
+    let round = 0;
     const taskCounter = tasks.reduce((counter, d) => (counter[d] = (counter[d] ?? 0) + 1, counter), {});
     
     for (const val of Object.values(taskCounter)) {
@@ -11,9 +11,9 @@ const minimumRounds = tasks => {
         
         const count = Math.floor(val / 3);
         
-        if (val % 3 !== 0) rounds += count + 1;
-        else rounds += count;
+        if (val % 3 !== 0) round += count + 1;
+        else round += count;
     }    
     
-    return rounds;
+    return round;
 };
