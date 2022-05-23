@@ -4,7 +4,7 @@
  */
 const setZeroes = (matrix) => {
     const makeRowZero = (row) => {
-        for (let i = 0; i < matrix[row].length; i++)
+        for (let i = 0; i < matrix[0].length; i++)
             if (matrix[row][i] !== 0 && matrix[row][i] !== 's')
                 matrix[row][i] = 's';
     };
@@ -16,7 +16,7 @@ const setZeroes = (matrix) => {
     };
     
     for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
+        for (let j = 0; j < matrix[0].length; j++) {
             if (matrix[i][j] === 0) {
                 makeRowZero(i);
                 makeColZero(j);
@@ -25,7 +25,7 @@ const setZeroes = (matrix) => {
     }
     
     for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++)
+        for (let j = 0; j < matrix[0].length; j++)
             if (matrix[i][j] === 's')
                 matrix[i][j] = 0;
     }
