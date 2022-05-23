@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-const setZeroes = (matrix) => {
+const setZeroes = matrix => {
     const makeRowZero = row => {
         for (let i = 0; i < matrix[0].length; i++)
             if (matrix[row][i] !== 0 && matrix[row][i] !== 's')
