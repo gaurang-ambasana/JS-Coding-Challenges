@@ -5,6 +5,7 @@
  * @return {string}
  */
 const data = {};
+
 const encode = longUrl => {
     const id = Date.now();
     data[id] = longUrl;
