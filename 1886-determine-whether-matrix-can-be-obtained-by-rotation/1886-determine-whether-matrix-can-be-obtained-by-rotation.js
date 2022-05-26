@@ -21,6 +21,5 @@ const findRotation = (mat, target) => {
         if (compare()) return true;
         rotate();
     }
-    
     return false;
 };
