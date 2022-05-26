@@ -17,10 +17,8 @@ const findRotation = (mat, target) => {
         }
     }
     
-    rotate();
-    
     for (let i = 0; i < 4; i++) {
-        if (compare(mat)) return true;
+        if (compare()) return true;
         rotate();
     }
     
