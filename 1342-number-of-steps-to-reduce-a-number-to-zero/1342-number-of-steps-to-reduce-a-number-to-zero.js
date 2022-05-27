@@ -12,6 +12,5 @@ const numberOfSteps = (num, steps = 0) => {
             return numberOfSteps(num - 1, steps);
         }
     }
-    
     return steps;
 };
