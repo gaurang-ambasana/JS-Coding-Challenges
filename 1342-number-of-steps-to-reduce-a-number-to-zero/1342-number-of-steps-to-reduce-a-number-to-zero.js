@@ -1,5 +1,6 @@
 /**
  * @param {number} num
+ * @param {number} steps (defaulted to 0)
  * @return {number}
  */
 const numberOfSteps = (num, steps = 0) => {
