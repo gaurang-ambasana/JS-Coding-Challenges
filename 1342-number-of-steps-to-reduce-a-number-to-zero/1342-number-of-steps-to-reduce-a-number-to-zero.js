@@ -2,7 +2,7 @@
  * @param {number} num
  * @return {number}
  */
-let numberOfSteps = (num, steps = 0) => {
+const numberOfSteps = (num, steps = 0) => {
     if (num !== 0) {
         if (num % 2 === 0) {
             steps++;
