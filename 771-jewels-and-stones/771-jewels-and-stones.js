@@ -3,4 +3,4 @@
  * @param {string} stones
  * @return {number}
  */
-const numJewelsInStones = (jewels, stones) => stones.split(``).reduce((num, s) => jewels.includes(s) ? ++num : num, 0);
+const numJewelsInStones = (jewels, stones) => stones.split('').reduce((num, s) => jewels.includes(s) ? ++num : num, 0);
