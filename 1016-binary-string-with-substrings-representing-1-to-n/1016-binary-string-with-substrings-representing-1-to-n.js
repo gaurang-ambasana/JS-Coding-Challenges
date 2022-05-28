@@ -3,7 +3,7 @@
  * @param {number} n
  * @return {boolean}
  */
-var queryString = function(s, n) {
+const queryString = (s, n) => {
     for (let i = 1; i <= n; i++)
         if (!s.includes(i.toString(2)))
             return false;
