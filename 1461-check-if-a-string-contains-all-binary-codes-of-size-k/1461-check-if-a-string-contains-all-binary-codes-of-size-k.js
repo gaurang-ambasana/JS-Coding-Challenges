@@ -11,10 +11,8 @@ const hasAllCodes = (s, k) => {
     const max = Math.pow(2, k);
     const set = new Set();
 
-    for (let i = 0, n = s.length - k; i <= n; i++) {
+    for (let i = 0, n = s.length - k; i <= n; i++)
         set.add(s.substr(i, k));
-        if (set.size === max) return true;
-    }
 
-    return false;
+    return set.size === max;
 };
