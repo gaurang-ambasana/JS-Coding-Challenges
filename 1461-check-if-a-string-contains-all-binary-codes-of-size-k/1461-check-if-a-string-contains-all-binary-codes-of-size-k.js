@@ -9,5 +9,5 @@ let hasAllCodes = (s, k) => {
     for (let i = 0, n = s.length - k; i <= n; i++)
         set.add(s.substr(i, k));
 
-    return set.size === 2 ** k;
+    return set.size === Math.pow(2, k);
 };
