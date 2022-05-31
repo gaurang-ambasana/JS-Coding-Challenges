@@ -8,11 +8,11 @@ const hasAllCodes = (s, k) => {
     
     if (s.length < k) return false;
     
-    const max = Math.pow(2, k);
+    const n = Math.pow(2, k);
     const set = new Set();
 
     for (let i = 0, n = s.length - k; i <= n; i++)
         set.add(s.substr(i, k));
 
-    return set.size === max;
+    return set.size === n;
 };
