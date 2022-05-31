@@ -2,7 +2,7 @@
  * @param {string} text
  * @return {number}
  */
-const maxNumberOfBalloons = function(text) {
+const maxNumberOfBalloons = text => {
     const balloon = {
         'b' : 0,
         'a' : 0,
@@ -43,5 +43,5 @@ const maxNumberOfBalloons = function(text) {
     balloon['l'] = Math.floor(balloon['l'] / 2);
     balloon['o'] = Math.floor(balloon['o'] / 2);
     
-    return Math.min(...Object.values(balloon))
+    return Math.min(...Object.values(balloon));
 };
