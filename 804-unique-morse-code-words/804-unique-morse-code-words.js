@@ -31,5 +31,5 @@ const uniqueMorseRepresentations = words => {
         y:"-.--",
         z:"--.."
     };
-    return (new Set(words.map(s => s.split('').map(c => convenienceTable[c]).join('')))).size;
+    return new Set(words.map(s => s.split('').map(c => convenienceTable[c]).join(''))).size;
 }
