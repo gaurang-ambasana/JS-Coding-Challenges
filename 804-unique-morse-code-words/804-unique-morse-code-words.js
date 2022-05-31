@@ -2,7 +2,7 @@
  * @param {string[]} words
  * @return {number}
  */
-const uniqueMorseRepresentations = words => {
+const uniqueMorseRepresentations = (words) => {
     const convenienceTable = {
         a:".-",
         b:"-...",
@@ -29,7 +29,7 @@ const uniqueMorseRepresentations = words => {
         w:".--",
         x:"-..-",
         y:"-.--",
-        z:"--.."
+        z:"--..",
     };
     return new Set(words.map(s => s.split('').map(c => convenienceTable[c]).join(''))).size;
 }
