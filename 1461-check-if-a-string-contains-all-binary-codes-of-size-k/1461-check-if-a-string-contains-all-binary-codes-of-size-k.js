@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {boolean}
  */
-const hasAllCodes = (s, k) => {
+let hasAllCodes = (s, k) => {
     const set = new Set();
 
     for (let i = 0; i <= s.length - k; i++)
