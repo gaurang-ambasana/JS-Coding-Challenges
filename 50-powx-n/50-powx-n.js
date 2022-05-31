@@ -3,4 +3,4 @@
  * @param {number} n
  * @return {number}
  */
-let myPow = (x, n) => x ** n;
+const myPow = (x, n) => x ** n;
