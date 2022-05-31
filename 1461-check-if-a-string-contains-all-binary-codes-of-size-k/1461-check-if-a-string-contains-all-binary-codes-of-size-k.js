@@ -8,7 +8,7 @@ const hasAllCodes = function(s, k) {
     
     if (s.length < k) return false;
     
-    const max = 1 << k;
+    const max = 2 ** k;
     const set = new Set();
 
     for (let i = 0, n = s.length - k; i <= n; i++) {
