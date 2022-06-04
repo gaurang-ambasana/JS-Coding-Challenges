@@ -4,7 +4,7 @@
  * @return {number}
  */
 const rearrangeCharacters = (s, target) => {
-    const freqCounter = (str) => str.split('').reduce((c, a) => (c[a] = (c[a] ?? 0) + 1, c), {});
+    const freqCounter = (str) => str.split(``).reduce((c, a) => (c[a] = (c[a] ?? 0) + 1, c), {});
                                                     
     const targetFreq = freqCounter(target);
     const sFreq = freqCounter(s);
