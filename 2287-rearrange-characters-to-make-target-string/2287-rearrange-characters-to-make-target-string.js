@@ -3,7 +3,7 @@
  * @param {string} target
  * @return {number}
  */
-var rearrangeCharacters = function(s, target) {
+const rearrangeCharacters = (s, target) => {
     const freqCounter = str => str.split('').reduce((c, a) => (c[a] = (c[a] ?? 0) + 1, c), {});
                                                     
     const targetFreq = freqCounter(target);
