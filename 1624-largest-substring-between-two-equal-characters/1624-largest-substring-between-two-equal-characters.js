@@ -13,8 +13,8 @@ const maxLengthBetweenEqualCharacters = s => {
         const val = map[key];
         
         if (val.length > 1) {
-            const start = Math.min(...val) + 1;
-            const end = Math.max(...val);
+            const start = val[0] + 1;
+            const end = val[val.length - 1];
             const len = s.substring(start, end).length;
             return Math.max(max, len);
         }
