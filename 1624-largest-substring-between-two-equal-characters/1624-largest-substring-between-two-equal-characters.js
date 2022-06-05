@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var maxLengthBetweenEqualCharacters = function(s) {
+const maxLengthBetweenEqualCharacters = (s) => {
     const map = s.split('').reduce((o, c, i) => {
         if (c in o) o[c].push(i);
         else o[c] = [i];
