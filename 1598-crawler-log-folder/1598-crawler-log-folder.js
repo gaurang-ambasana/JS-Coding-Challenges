@@ -2,7 +2,7 @@
  * @param {string[]} logs
  * @return {number}
  */
-const minOperations = logs => logs.reduce((steps, l) => {
+const minOperations = (logs) => logs.reduce((steps, l) => {
     switch (l) {
         case '../': {
             if (steps > 0) --steps;
