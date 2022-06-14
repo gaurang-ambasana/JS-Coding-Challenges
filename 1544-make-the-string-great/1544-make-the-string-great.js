@@ -2,9 +2,9 @@
  * @param {string} s
  * @return {string}
  */
-const makeGood = s => {
-    const isUpperCase = c => c === c.toUpperCase();
-    const isLowerCase = c => c === c.toLowerCase();
+const makeGood = (s) => {
+    const isUpperCase = (c) => c === c.toUpperCase();
+    const isLowerCase = (c) => c === c.toLowerCase();
     
     const stack = [s[0]];
     
