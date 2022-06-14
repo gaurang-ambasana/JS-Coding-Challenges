@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findPeakElement = nums => {
+const findPeakElement = (nums) => {
     const map = nums.reduce((o, n, i) => (o[i] = n, o), {
         "-1": -Infinity,
         [nums.length]: -Infinity, 
