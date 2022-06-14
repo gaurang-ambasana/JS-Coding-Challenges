@@ -2,7 +2,4 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findPeakElement = function(nums) {
-    const max = Math.max(...nums);
-    return nums.indexOf(max);
-};
+var findPeakElement = nums => nums.indexOf(Math.max(...nums));
