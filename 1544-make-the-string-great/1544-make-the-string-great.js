@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-const makeGood = (s) => {
+const makeGood = s => {
     const stack = [s[0]];
     
     for (let i = 1; i < s.length; i++)
