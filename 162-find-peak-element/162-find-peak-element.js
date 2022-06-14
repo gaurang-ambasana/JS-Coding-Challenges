@@ -8,5 +8,5 @@ const findPeakElement = nums => {
         [nums.length]: -Infinity
     });
     
-    return nums.findIndex((n, i) => n > map[i + 1] && n && map[i - 1]);
+    return nums.findIndex((n, i) => n > map[i + 1] && n > map[i - 1]);
 };
