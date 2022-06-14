@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-var makeGood = (s) => {
+const makeGood = s => {
     const isUpperCase = c => c === c.toUpperCase();
     const isLowerCase = c => c === c.toLowerCase();
     
