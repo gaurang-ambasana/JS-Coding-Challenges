@@ -3,7 +3,7 @@
  * @param {number} income
  * @return {number}
  */
-const calculateTax = (brackets, income) => {
+var calculateTax = (brackets, income) => {
     let res = 0;
     let prev = 0;
     
