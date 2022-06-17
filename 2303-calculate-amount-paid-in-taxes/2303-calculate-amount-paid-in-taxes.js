@@ -3,8 +3,8 @@
  * @param {number} income
  * @return {number}
  */
-var calculateTax = (brackets, income) => {
-    let res = 0;
+const calculateTax = (brackets, income) => {
+    let paid = 0;
     let prev = 0;
     
     for (const [amt, percent] of brackets) {
@@ -12,9 +12,9 @@ var calculateTax = (brackets, income) => {
         const tax = current * (percent / 100);
         
         income -= current;
-        res += tax;
+        paid += tax;
         prev = amt;
         
-        if (income <= 0) return res;
+        if (income <= 0) return paid;
     }
 };
