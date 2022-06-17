@@ -8,13 +8,13 @@ const calculateTax = (brackets, income) => {
     let prev = 0;
     
     for (const [amt, percent] of brackets) {
-        const curr = Math.min(income, amt - prev);
-        const tax = curr * (percent / 100);
+        const current = Math.min(income, amt - prev);
+        const tax = current * (percent / 100);
         
-        income -= curr;
+        income -= current;
         res += tax;
         prev = amt;
         
-        if (income <= 0) return res; 
+        if (income <= 0) return res;
     }
 };
