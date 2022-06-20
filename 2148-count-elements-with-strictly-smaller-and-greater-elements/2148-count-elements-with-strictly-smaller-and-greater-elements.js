@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var countElements = function(nums) {    
+const countElements = nums => {    
     const max = Math.max(...nums);
     const min = Math.min(...nums);
     
