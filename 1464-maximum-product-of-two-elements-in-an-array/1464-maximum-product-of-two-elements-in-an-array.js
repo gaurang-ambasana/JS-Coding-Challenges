@@ -3,16 +3,16 @@
  * @return {number}
  */
 const maxProduct = nums => {
-    let start = 0;
+    let j = 0;
     let max = 0;
     
-    while (start < nums.length) {
+    while (j < nums.length) {
         for (let i = 0; i < nums.length; i++) {
-            if (i !== start)
-                max = Math.max(max, (nums[start] - 1) * (nums[i] - 1));
+            if (i !== j)
+                max = Math.max(max, (nums[j] - 1) * (nums[i] - 1));
         }
         
-        start++;
+        j++;
     }
     
     return max;
