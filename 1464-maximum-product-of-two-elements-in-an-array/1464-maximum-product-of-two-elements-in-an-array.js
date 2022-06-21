@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxProduct = function(nums) {
+const maxProduct = nums => {
     let start = 0;
     let max = 0;
     
