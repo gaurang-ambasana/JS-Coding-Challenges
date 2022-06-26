@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minimumDeletions = function(nums) {
+const minimumDeletions = (nums) => {
     const max = Math.max(...nums);
     const min = Math.min(...nums);
     const idxMax = nums.indexOf(max);
