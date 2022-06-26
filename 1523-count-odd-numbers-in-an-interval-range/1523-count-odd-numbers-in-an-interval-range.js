@@ -3,9 +3,4 @@
  * @param {number} high
  * @return {number}
  */
-const countOdds = (low, high) => {
-    let res = 0;
-    for (let i = low; i < high + 1; i++)
-        if (i % 2) res++;
-    return res;
-};
+const countOdds = (low, high) => low % 2 ? Math.floor((high - low) / 2) + 1 : Math.round((high - low) / 2);
