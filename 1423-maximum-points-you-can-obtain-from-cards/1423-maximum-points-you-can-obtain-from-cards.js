@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {number}
  */
-const maxScore = function(cardPoints, k) {
+const maxScore = (cardPoints, k) => {
     if (k === cardPoints.length) return cardPoints.reduce((sum, e) => sum + e, 0);
     
     let sum = cardPoints.slice(0, k).reduce((a, e) => a + e, 0);
