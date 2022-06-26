@@ -2,7 +2,7 @@
  * @param {number[]} salary
  * @return {number}
  */
-const average = salary => {
+const average = (salary) => {
     const max = Math.max(...salary);
     const min = Math.min(...salary);
     
