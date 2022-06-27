@@ -2,6 +2,4 @@
  * @param {string} n
  * @return {number}
  */
-var minPartitions = function(n) {
-    return Math.max(...n)
-};
+const minPartitions = (n) => Math.max(...n);
