@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-let largestPerimeter = nums => {
+var largestPerimeter = (nums) => {
     nums.sort((a, b) => a - b);
     
     for (let i = nums.length - 1; i >= 2; i--) {
