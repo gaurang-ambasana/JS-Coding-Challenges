@@ -11,7 +11,7 @@ const matrixReshape = (mat, r, c) => {
     
     const res = [];
     
-    for(let i = 0; i < r; i++)
+    for (let i = 0; i < r; i++)
         res.push(flatArr.splice(0, c));
     
     return res;
