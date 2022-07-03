@@ -2,7 +2,7 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-var canMakeArithmeticProgression = function(arr) {
+const canMakeArithmeticProgression = arr => {
     if (arr.every(v => v === arr[0]))
         return true;
     
