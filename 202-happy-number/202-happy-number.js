@@ -8,7 +8,7 @@ const isHappy = n => {
     
     if (n > 9) {
         while (n.toString().length > 1) {
-            n = n.toString().split('').reduce((p, x) => p + (x ** 2), 0);
+            n = n.toString().split(``).reduce((p, x) => p + (x ** 2), 0);
             
             if (parseInt(n) === 1)
                 return true;
