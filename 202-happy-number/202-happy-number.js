@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {boolean}
  */
-var isHappy = n => {
+const isHappy = n => {
     if (n === 1 || n === 7)
         return true;
     
