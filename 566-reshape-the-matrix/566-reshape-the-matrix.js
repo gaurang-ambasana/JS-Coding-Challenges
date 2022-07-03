@@ -4,7 +4,7 @@
  * @param {number} c
  * @return {number[][]}
  */
-var matrixReshape = function(mat, r, c) {
+var matrixReshape = (mat, r, c) => {
     const flatArr = mat.flat();
     if (flatArr.length !== r*c) return mat;
     const res = [];
