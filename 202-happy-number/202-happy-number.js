@@ -13,7 +13,7 @@ var isHappy = n => {
             if (parseInt(n) === 1)
                 return true;
         }
-        
-        return parseInt(n) === 1 || parseInt(n) === 7;
+        const x = parseInt(n);
+        return x === 1 || x === 7;
     } else return false;
 };
