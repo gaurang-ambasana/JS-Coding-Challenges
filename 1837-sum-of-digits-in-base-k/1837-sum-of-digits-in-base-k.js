@@ -3,4 +3,4 @@
  * @param {number} k
  * @return {number}
  */
-var sumBase = (n, k) => n.toString(k).split(``).map(Number).reduce((res, digit) => res + digit, 0);
+var sumBase = (n, k) => n.toString(k).split(``).reduce((res, digit) => parseInt(res) + parseInt(digit), 0);
