@@ -2,4 +2,4 @@
  * @param {string} address
  * @return {string}
  */
-const defangIPaddr = address => address.replaceAll(`.`, `[.]`);
+var defangIPaddr = address => address.replaceAll(`.`, `[.]`);
