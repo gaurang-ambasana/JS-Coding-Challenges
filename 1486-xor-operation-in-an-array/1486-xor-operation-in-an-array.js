@@ -3,4 +3,4 @@
  * @param {number} start
  * @return {number}
  */
-const xorOperation = (n, start) => Array(n).fill(0).reduce((res, x, i) => res ^ (start + 2 * i), 0);
+const xorOperation = (n, start) => Array(n).fill().reduce((res, _, i) => res ^ (start + 2 * i), 0);
