@@ -4,11 +4,10 @@
  * @return {number}
  */
 const xorOperation = (n, start) => {
-    const arr = [];
-    let i = 1;
+    const arr = [start];
     
-    while (arr.length !== n - 1) 
-        arr.push(start + 2 * i++);
+    while (arr.length !== n) 
+        arr.push(start + 2 * arr.length);
     
-    return arr.reduce((r, e) => r ^ e, start);
+    return arr.slice(1, n).reduce((r, e) => r ^ e, start);
 };
