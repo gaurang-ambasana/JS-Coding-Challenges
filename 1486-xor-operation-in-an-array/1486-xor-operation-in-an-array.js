@@ -3,7 +3,7 @@
  * @param {number} start
  * @return {number}
  */
-var xorOperation = function(n, start) {
+const xorOperation = (n, start) => {
     const arr = [];
     let i = 1;
     
