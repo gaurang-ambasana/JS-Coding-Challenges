@@ -6,4 +6,6 @@
 
 // Since (X & A) ^ (X & B) = X & (A ^ B) 
 
-const getXORSum = (arr1, arr2) => arr1.reduce((a, b) => a ^ b) & arr2.reduce((a, b) => a ^ b);
+const getXORSum = (arr1, arr2) => {
+    return arr1.reduce((a, b) => a ^ b) & arr2.reduce((a, b) => a ^ b);
+}
