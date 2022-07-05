@@ -3,7 +3,7 @@
  * @param {number} n
  * @return {number[]}
  */
-const shuffle = (nums, n) => {
+var shuffle = (nums, n) => {
     const x = nums.slice(0, n);
     const y = nums.slice(-n);
     
