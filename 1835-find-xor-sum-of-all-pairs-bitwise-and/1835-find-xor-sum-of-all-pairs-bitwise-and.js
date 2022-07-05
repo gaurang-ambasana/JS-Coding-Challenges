@@ -8,4 +8,4 @@
 
 var doXOR = (a, b) => a ^ b;
 
-var getXORSum = (arr1, arr2) => arr1.reduce(doXOR) & arr2.reduce(doXOR);
+let getXORSum = (arr1, arr2) => arr1.reduce(doXOR) & arr2.reduce(doXOR);
