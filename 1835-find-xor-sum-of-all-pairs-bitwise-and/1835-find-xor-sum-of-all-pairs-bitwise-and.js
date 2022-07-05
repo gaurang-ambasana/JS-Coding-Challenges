@@ -3,4 +3,9 @@
  * @param {number[]} arr2
  * @return {number}
  */
-const getXORSum = (arr1, arr2) => arr2.reduce((r, e) => r ^ e) & arr1.reduce((r, e) => r ^ e);
+
+// Since (X & A) ^ (X & B) = X & (A ^ B)
+
+const doXOR = (a, b) => a ^ b;
+
+const getXORSum = (arr1, arr2) => arr1.reduce(doXOR) & arr2.reduce(doXOR);
