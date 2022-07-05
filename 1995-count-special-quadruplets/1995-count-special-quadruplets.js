@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var countQuadruplets = function(nums) {
+const countQuadruplets = (nums) => {
     let res = 0;
     
     for (let i = 0; i < nums.length; i++)
