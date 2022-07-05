@@ -7,9 +7,9 @@ class SubrectangleQueries {
     }
     
     updateSubrectangle(row1, col1, row2, col2, newValue) {
-        for (let i = row1; i < row2 + 1; i++)
-            for(let j = col1; j < col2 + 1; j++)
-                this.rec[i][j] = newValue;
+        for (let x = row1; x < row2 + 1; x++)
+            for(let y = col1; y < col2 + 1; y++)
+                this.rec[x][y] = newValue;
     }
     
     getValue(row, col) {
