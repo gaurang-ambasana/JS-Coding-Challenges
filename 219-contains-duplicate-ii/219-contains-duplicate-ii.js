@@ -7,7 +7,7 @@ const containsNearbyDuplicate = (nums, k) => {
     const hash = new Map();
     
     for (const [i, j] of nums.entries()) {
-        if (hash.has(j) && (i - hash.get(j) <= k))
+        if (hash.has(j) && (i - hash.get(j)) < k + 1)
             return true;
         
         hash.set(j, i);
