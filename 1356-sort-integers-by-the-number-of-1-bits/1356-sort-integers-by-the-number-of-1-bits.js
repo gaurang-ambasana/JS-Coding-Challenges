@@ -3,9 +3,8 @@
  * @return {number[]}
  */
 var sortByBits = (arr) => {
-    const get1s = (n) => n.toString(2).split(``).reduce((c, a) => a === '1' ? ++c : c, 0);
     return arr.sort((a, b) => {
-        const d = get1s(a) - get1s(b);
+        const d = a.toString(2).split(``).reduce((c, a) => a === '1' ? ++c : c, 0) - b.toString(2).split(``).reduce((c, a) => a === '1' ? ++c : c, 0);
         return d ? d : a - b;
     });
 };
