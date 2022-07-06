@@ -12,7 +12,7 @@ class MyQueue {
     }
     
     peek() {
-        return this.q[0];
+        return this.q.at(0);
     }
     
     empty() {
