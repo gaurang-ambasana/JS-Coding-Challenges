@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {boolean}
  */
-var containsNearbyDuplicate = function(nums, k) {
+const containsNearbyDuplicate = (nums, k) => {
     const hash = new Map();
     
     for (const [i, j] of nums.entries()) {
