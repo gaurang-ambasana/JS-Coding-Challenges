@@ -1,21 +1,9 @@
-/**
- * @param {number[]} nums
- */
-var NumArray = function(nums) {
-    this.nums = nums;
+class NumArray {
+    constructor (nums) {
+        this.nums = nums;
+    }
+    
+    sumRange (left, right) {
+        return this.nums.slice(left, right + 1).reduce((s, e) => s + e, 0);
+    };
 };
-
-/** 
- * @param {number} left 
- * @param {number} right
- * @return {number}
- */
-NumArray.prototype.sumRange = function(left, right) {
-    return this.nums.slice(left, right + 1).reduce((s, e) => s + e, 0);
-};
-
-/** 
- * Your NumArray object will be instantiated and called as such:
- * var obj = new NumArray(nums)
- * var param_1 = obj.sumRange(left,right)
- */
