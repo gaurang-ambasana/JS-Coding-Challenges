@@ -1,7 +1,9 @@
 class ParkingSystem {
     constructor (big, medium, small) {
         this.parking = {
-            big, medium, small
+            big, 
+            medium, 
+            small,
         };
     }
     
