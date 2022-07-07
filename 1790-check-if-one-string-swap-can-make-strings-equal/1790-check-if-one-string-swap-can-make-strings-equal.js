@@ -10,5 +10,5 @@ const areAlmostEqual = (s1, s2) => {
         if (s1[i] !== s2[i])
             diff.push(s1[i], s2[i]);
     
-    return diff.length < 5 && diff[0] === diff[3] && diff[1] === diff[2];
+    return (diff.length < 5) && (diff[0] === diff[3]) && (diff[1] === diff[2]);
 };
