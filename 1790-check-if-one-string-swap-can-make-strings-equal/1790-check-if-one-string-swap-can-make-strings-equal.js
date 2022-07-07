@@ -3,7 +3,7 @@
  * @param {string} s2
  * @return {boolean}
  */
-var areAlmostEqual = function(s1, s2) {
+const areAlmostEqual = (s1, s2) => {
     let diff = [];    
     
     for (const i in s1)
