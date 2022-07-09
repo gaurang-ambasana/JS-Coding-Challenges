@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {boolean}
  */
-const isToeplitzMatrix = matrix => {
+const isToeplitzMatrix = (matrix) => {
     let start = 0;
     
     while (start < matrix.length) { 
