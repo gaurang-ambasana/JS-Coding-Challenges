@@ -4,6 +4,6 @@
  * @return {boolean[]}
  */
 const kidsWithCandies = (candies, extraCandies) => {
-    const max = Math.max(...candies);
+    const max = candies.reduce((max, c) => c > max ? c : max, -Infinity);
     return candies.map(c => c + extraCandies).map(n => n > max - 1);
 };
