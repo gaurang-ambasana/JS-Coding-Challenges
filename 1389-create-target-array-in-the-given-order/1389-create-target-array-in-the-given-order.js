@@ -4,10 +4,10 @@
  * @return {number[]}
  */
 const createTargetArray = (nums, index) => {
-    const target = [];
+    const res = [];
     
     for (let i = 0, n = nums.length; i < n; i++)
-        target.splice(index[i], 0, nums[i]);
+        res.splice(index[i], 0, nums[i]);
     
-    return target;
+    return res;
 };
