@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string[]}
  */
-var cellsInRange = function(s) {
+const cellsInRange = s => {
     const range = [];
     const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     
