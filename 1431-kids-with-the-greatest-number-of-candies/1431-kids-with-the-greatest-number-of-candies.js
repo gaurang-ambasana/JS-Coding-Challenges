@@ -5,5 +5,5 @@
  */
 const kidsWithCandies = (candies, extraCandies) => {
     const max = candies.reduce((max, c) => c > max ? c : max, -Infinity);
-    return candies.map(c => c + extraCandies).map(n => n > max - 1);
+    return candies.map(c => c + extraCandies).map(n => n + 1 > max);
 };
