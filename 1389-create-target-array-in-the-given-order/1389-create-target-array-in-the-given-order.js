@@ -6,7 +6,7 @@
 const createTargetArray = (nums, index) => {
     const target = [];
     
-    for (let i = 0, n = index.length; i < n; i++)
+    for (let i = 0, l = index.length; i < l; i++)
         target.splice(index[i], 0, nums[i]);
     
     return target;
