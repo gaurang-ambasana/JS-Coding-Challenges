@@ -3,12 +3,12 @@
  * @return {string[]}
  */
 const cellsInRange = s => {
-    const range = [];
+    const cells = [];
     const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     
     for (let i = alpha.indexOf(s[0]), n = alpha.indexOf(s[3]) + 1; i < n; i++)
         for (let j = s[1], k = parseInt(s[4]) + 1; j < k; j++)
-            range.push(`${alpha[i]}${j}`);
+            cells.push(`${alpha[i]}${j}`);
     
-    return range;
+    return cells;
 };
