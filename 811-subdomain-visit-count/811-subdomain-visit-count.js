@@ -2,11 +2,11 @@
  * @param {string[]} cpdomains
  * @return {string[]}
  */
-var subdomainVisits = (cpdomains) => Object.entries(cpdomains.reduce((count, url) => {
+const subdomainVisits = cpdomains => Object.entries(cpdomains.reduce((count, url) => {
     const [c, domain] = url.split(` `);
     count[domain] = parseInt(count[domain] ?? 0) + parseInt(c);
         
-    const tld = domain.match(/(\.\w+)$/g).join(``).slice(1);
+    const tld = domain.match(/(\.|\w+)$/g).join(``);
     count[tld] = parseInt(count[tld] ?? 0) + parseInt(c);
         
     if (domain.indexOf(`.`) !== domain.lastIndexOf(`.`)) {
