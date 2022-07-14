@@ -7,11 +7,6 @@ class OrderedStream {
         this.os = {};
     }
 
-    /** 
-    * @param {number} idKey 
-    * @param {string} value
-    * @return {string[]}
-    */
     insert (idKey, value) {
         this.os[idKey] = value;
     
