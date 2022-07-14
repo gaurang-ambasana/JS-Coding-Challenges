@@ -1,4 +1,4 @@
-var breakPalindrome = function(palindrome) {
+var breakPalindrome = (palindrome) => {
     if (palindrome.length > 1) {   
         const p = palindrome.split(``);
         
