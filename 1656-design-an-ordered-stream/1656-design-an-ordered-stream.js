@@ -19,9 +19,9 @@ class OrderedStream {
     
         while (this.pointer in this.os) {
             arr.push(this.os[this.pointer]);
-            ++this.pointer;
+            this.pointer++;
         }
     
         return arr;
     }
-};
+}
