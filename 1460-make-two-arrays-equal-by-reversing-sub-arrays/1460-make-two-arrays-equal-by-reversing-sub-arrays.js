@@ -9,5 +9,5 @@ var canBeEqual = (target, arr) => {
     const targetCounter = getFreq(target);
     const arrCounter = getFreq(arr);
     
-    return Object.keys(arrCounter).every(e => (targetCounter[e] === arrCounter[e]));
+    return Object.keys(arrCounter).every(e => targetCounter[e] === arrCounter[e]);
 };
