@@ -3,8 +3,8 @@ class MyStack {
         this.s = [];
     }
     
-    push(val) {
-        this.s.unshift(val);
+    push(n) {
+        this.s.unshift(n);
     }
     
     pop() {
