@@ -1,7 +1,1 @@
-const addDigits = num => {
-    do {
-        num = num.toString().split(``).reduce((sum, n) => parseInt(sum) + parseInt(n), 0);
-    } while (num.toString().length > 1)
-    
-    return num;
-}
+const addDigits = num => num ? 1 + (num - 1) % 9 : 0;
