@@ -1,7 +1,7 @@
 class Encrypter {
     constructor (keys, values, dictionary) {
         this.encryptMap = keys.reduce((map, key, i) => (map[key] = values[i], map), {});
-        this.encryptedVals = [...new Set(dictionary)].map(w => this.encrypt(w));
+        this.encryptedVals = [...new Set(dictionary)].map((w) => this.encrypt(w));
     }
     
     encrypt (word) {
@@ -9,6 +9,6 @@ class Encrypter {
     }
     
     decrypt (word) {
-        return this.encryptedVals.filter(x => x === word).length;
+        return this.encryptedVals.filter((x) => x === word).length;
     }
 }
