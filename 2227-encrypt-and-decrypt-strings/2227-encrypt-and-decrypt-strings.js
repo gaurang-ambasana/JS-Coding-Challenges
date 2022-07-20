@@ -6,7 +6,7 @@ class Encrypter {
     }
     
     encrypt (word1) {
-        return word1.split(``).reduce((e, c) => e + this.encryptMap[c], '');
+        return word1.split(``).reduce((s, c) => s + this.encryptMap[c], ``);
     }
     
     decrypt (word2) {
