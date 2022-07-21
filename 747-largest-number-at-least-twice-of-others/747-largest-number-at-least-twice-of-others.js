@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var dominantIndex = function(nums) {
+const dominantIndex = (nums) => {
     const max = nums.reduce((m, n) => m > n ? m : n, -1);
     const idx = nums.indexOf(max);
     nums.splice(idx, 1);
