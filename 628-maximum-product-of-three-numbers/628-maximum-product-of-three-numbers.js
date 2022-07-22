@@ -3,7 +3,7 @@
  * @return {number}
  */
 const maximumProduct = nums => {
-    if (nums.length === 3)
+    if (nums.length == 3)
         return nums[0] * nums[1] * nums[2];
     else {
         nums.sort((a, b) => b - a);
