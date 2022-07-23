@@ -3,7 +3,7 @@
  * @param {string} part
  * @return {string}
  */
-const removeOccurrences = (s, part) => {
+var removeOccurrences = (s, part) => {
     let len;
     
     while (len !== s.length) {
