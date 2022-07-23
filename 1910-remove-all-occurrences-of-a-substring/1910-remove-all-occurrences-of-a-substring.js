@@ -12,4 +12,4 @@ const removeOccurrences = (s, part) => {
     }
     
     return s;
-};
+}
