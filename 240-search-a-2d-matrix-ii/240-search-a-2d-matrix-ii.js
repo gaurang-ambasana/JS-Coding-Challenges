@@ -3,7 +3,7 @@
  * @param {number} target
  * @return {boolean}
  */
-var searchMatrix = (matrix, target) => {
+const searchMatrix = (matrix, target) => {
     let col = matrix[0].length - 1;
     let row = 0;
     
