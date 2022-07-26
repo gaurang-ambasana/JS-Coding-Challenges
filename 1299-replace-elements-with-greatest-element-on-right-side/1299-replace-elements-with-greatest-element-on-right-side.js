@@ -2,4 +2,4 @@
  * @param {number[]} arr
  * @return {number[]}
  */
-const replaceElements = arr => arr.slice(0, arr.length - 1).map((_, i) => Math.max.apply(null, arr.slice(i + 1))).concat([-1]);
+var replaceElements = arr => arr.slice(0, arr.length - 1).map((_, i) => Math.max.apply(null, arr.slice(i + 1))).concat([-1]);
