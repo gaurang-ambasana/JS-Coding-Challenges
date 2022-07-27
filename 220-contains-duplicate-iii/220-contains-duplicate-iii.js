@@ -11,4 +11,4 @@ const containsNearbyAlmostDuplicate = (nums, k, t) => {
                 return true;
     
     return false;
-};
+}
