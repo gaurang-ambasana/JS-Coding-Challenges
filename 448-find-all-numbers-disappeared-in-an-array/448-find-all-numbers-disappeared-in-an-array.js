@@ -2,12 +2,11 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var findDisappearedNumbers = nums => {
-    const n = nums.length;
-    const ans = [...Array(n).keys()].map(i => i + 1);
+var findDisappearedNumbers = function(nums) {
+    const ans = Array(nums.length).fill().map((_, i) => i + 1);
     
-    for (let i = 0; i < n; i++)
+    for (let i = 0, n = nums.length; i < n; i++)
         ans[nums[i] - 1] = false;
     
-    return ans.filter(x => x);
+    return ans.filter(Boolean);
 };
