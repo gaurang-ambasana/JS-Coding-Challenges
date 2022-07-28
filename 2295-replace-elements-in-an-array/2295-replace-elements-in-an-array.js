@@ -3,10 +3,11 @@
  * @param {number[][]} operations
  * @return {number[]}
  */
-var arrayChange = (nums, operations) => {
+const arrayChange = (nums, operations) => {
     const map = nums.reduce((o, n, i) => (o[n] = i, o), {});
     
-    for (const [org, num] of operations) {
+    for (let i = 0, n = operations.length; i < n; i++) {
+        const [org, num] = operations[i];
         nums[map[org]] = num;
         map[num] = map[org];
     }
