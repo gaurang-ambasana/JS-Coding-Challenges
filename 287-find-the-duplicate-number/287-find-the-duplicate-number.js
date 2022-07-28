@@ -2,4 +2,4 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findDuplicate = nums => Object.entries(nums.reduce((c, n) => (c[n] = (c[n] ?? 0) + 1, c), {})).find(([, f]) => f > 1)[0];
+const findDuplicate = nums => nums.sort((a, b) => a - b).find((n, i) => n - nums[i + 1] === 0);
