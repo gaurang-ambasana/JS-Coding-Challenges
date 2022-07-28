@@ -16,4 +16,4 @@ var firstMissingPositive = (nums) => {
             return i;
     
     return max;
-};
+}
