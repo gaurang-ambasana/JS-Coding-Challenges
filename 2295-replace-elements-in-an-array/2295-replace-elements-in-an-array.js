@@ -8,8 +8,9 @@ const arrayChange = (nums, operations) => {
     
     for (let i = 0, n = operations.length; i < n; i++) {
         const [org, num] = operations[i];
-        nums[map[org]] = num;
-        map[num] = map[org];
+        const idx = map[org];
+        nums[idx] = num;
+        map[num] = idx;
     }
     
     return nums;
