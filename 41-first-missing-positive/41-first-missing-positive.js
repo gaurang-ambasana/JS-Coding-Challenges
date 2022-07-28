@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var firstMissingPositive = (nums) => {
+const firstMissingPositive = nums => {
     if (!nums.includes(1))
         return 1;
     
