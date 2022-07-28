@@ -9,5 +9,5 @@ var findDisappearedNumbers = nums => {
     for (let i = 0; i < n; i++)
         ans[nums[i] - 1] = false;
     
-    return ans.filter(Boolean);
+    return ans.filter(x => x);
 };
