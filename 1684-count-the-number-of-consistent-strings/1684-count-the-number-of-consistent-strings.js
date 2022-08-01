@@ -3,4 +3,4 @@
  * @param {string[]} words
  * @return {number}
  */
-var countConsistentStrings = (allowed, words) => words.filter(w => new RegExp(`^[${allowed}]+$`).test(w)).length;
+const countConsistentStrings = (allowed, words) => words.reduce((c, w) => new RegExp(`^[${allowed}]+$`).test(w) ? ++c : c, 0);
