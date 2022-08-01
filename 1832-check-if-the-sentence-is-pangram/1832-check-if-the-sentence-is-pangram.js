@@ -2,4 +2,4 @@
  * @param {string} sentence
  * @return {boolean}
  */
-var checkIfPangram = sentence => new Set(sentence).size === 26; 
+const checkIfPangram = sentence => new Set(sentence).size === 26; 
