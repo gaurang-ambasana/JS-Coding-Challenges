@@ -3,4 +3,4 @@
  * @param {number} k
  * @return {string}
  */
-var truncateSentence = (s, k) => s.split(` `).slice(0, k).join(` `);
+const truncateSentence = (s, k) => s.split(` `).slice(0, k).join(` `);
