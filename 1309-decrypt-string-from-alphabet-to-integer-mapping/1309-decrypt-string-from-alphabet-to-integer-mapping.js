@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-var freqAlphabets = s => {
+const freqAlphabets = s => {
     const alphabets = `_abcdefghijklmnopqrstuvwxyz`;
     let ans = ``;
     
