@@ -3,6 +3,4 @@
  * @param {number} k
  * @return {number}
  */
-var kthSmallest = function(matrix, k) {
-    return matrix.flat().sort((a, b) => a - b)[--k];
-};
+var kthSmallest = (matrix, k) => matrix.flat().sort((a, b) => a - b)[--k];
