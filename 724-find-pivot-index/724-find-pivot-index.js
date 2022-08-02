@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var pivotIndex = function(nums) {
+const pivotIndex = nums => {
     if (nums.slice(1).reduce((s, e) => s + e, 0) === 0)
         return 0;
         
