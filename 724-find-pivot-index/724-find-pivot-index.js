@@ -3,12 +3,13 @@
  * @return {number}
  */
 var pivotIndex = nums => {
-    if (nums.slice(1).reduce((s, e) => s + e, 0) === 0)
-        return 0;
-        
-    for (let i = 1, n = nums.length; i < n; i++)
-        if (nums.slice(0, i).reduce((s, e) => s + e, 0) === nums.slice(i + 1).reduce((s, e) => s + e, 0))
-            return i;
+    const total = nums.reduce((sum, e) => sum + e, 0);
     
-    return -1;
+    let leftSum = 0;
+    
+    return nums.findIndex(n => {
+        if (leftSum === total - n - leftSum)
+            return true;
+        leftSum += n;
+    });
 };
