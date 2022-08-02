@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var pivotIndex = nums => {
+const pivotIndex = nums => {
     const total = nums.reduce((sum, e) => sum + e, 0);
     
     let leftSum = 0;
@@ -12,4 +12,4 @@ var pivotIndex = nums => {
             return true;
         leftSum += n;
     });
-};
+}
