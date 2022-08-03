@@ -3,7 +3,7 @@
  * @param {string} t
  * @return {boolean}
  */
-const isIsomorphic = (s, t) => {
+var isIsomorphic = (s, t) => {
     const hash1 = {}, hash2 = {};
     
     for (let i = 0, n = s.length; i < n; i++) {
