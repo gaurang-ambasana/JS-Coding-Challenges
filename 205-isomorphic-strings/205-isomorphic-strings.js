@@ -6,7 +6,7 @@
 const isIsomorphic = (s, t) => {
     const hash1 = {}, hash2 = {};
     
-    for (let i = 0; i < s.length; i++) {
+    for (let i = 0, n = s.length; i < n; i++) {
         const c1 = s[i], c2 = t[i];
         
         if (!hash2[c2] && !hash1[c1])
