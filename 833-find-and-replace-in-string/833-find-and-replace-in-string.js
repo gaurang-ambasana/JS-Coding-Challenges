@@ -5,8 +5,8 @@
  * @param {string[]} targets
  * @return {string}
  */
-var findReplaceString = function(s, indices, sources, targets) {
-    let ans = '';
+var findReplaceString = (s, indices, sources, targets) => {
+    let ans = ``;
     
     const map = indices.reduce((obj, n, idx) => (obj[n] = {
         source: sources[idx],
