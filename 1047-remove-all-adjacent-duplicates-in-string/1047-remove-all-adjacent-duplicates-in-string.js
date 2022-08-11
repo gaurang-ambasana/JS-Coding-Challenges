@@ -2,4 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-var removeDuplicates = (s) => s.split(``).slice(1).reduce((str, c) => str.at(-1) === c ? str.slice(0, -1) : str.concat(c), s[0]);
+var removeDuplicates = (s) => s.split(``).slice(1).reduce((stack, c) => {
+    stack.at(-1) === c ? stack.pop() : stack.push(c);
+    return stack;
+}, [s[0]]).join(``);
