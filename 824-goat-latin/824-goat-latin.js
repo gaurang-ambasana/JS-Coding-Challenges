@@ -2,7 +2,7 @@
  * @param {string} sentence
  * @return {string}
  */
-var toGoatLatin = sentence => {
+const toGoatLatin = sentence => {
     const words = sentence.split(` `);
     
     for (let i = 0, n = words.length; i < n; i++) {
