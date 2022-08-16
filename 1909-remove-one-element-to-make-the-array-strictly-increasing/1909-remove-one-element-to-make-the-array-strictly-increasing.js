@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const canBeIncreasing = nums => {
+var canBeIncreasing = nums => {
     for (let i = 0, n = nums.length; i < n; i++) {
         const arr = nums.slice(0, i).concat(nums.slice(i + 1));
         
