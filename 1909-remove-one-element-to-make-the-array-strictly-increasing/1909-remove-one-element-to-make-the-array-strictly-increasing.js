@@ -2,16 +2,12 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const canBeIncreasing = (nums) => {
+var canBeIncreasing = nums => {
     for (let i = 0, n = nums.length; i < n; i++) {
-        const arr = [...nums];
-        arr.splice(i, 1);
+        const arr = nums.slice(0, i).concat(nums.slice(i + 1));
         
-        const set = [...new Set(arr)];
-        
-        if (set.length === arr.length && set.sort((a, b) => a - b).join(``) === arr.join(``)) {
+        if (arr.every((e, i) => i === 0 || e > arr[i - 1]))
             return true;
-        }
     }
     
     return false;
