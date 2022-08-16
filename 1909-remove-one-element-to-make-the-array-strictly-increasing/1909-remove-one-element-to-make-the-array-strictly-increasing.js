@@ -9,7 +9,7 @@ var canBeIncreasing = function(nums) {
         
         const set = [...new Set(arr)];
         
-        if (set.length === arr.length && set.sort((a, b) => a - b).every((e, i) => e === arr[i])) {
+        if (set.length === arr.length && set.sort((a, b) => a - b).join() === arr.join()) {
             return true;
         }
     }
