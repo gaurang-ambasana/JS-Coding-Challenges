@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-const canBeIncreasing = nums => {
+const canBeIncreasing = (nums) => {
     for (let i = 0, n = nums.length; i < n; i++) {
         const arr = [...nums];
         arr.splice(i, 1);
