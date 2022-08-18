@@ -4,13 +4,14 @@
  * @return {character}
  */
 var findKthBit = function(n, k) {
-    const arr = ["0"];
-    const invertBits = s => s.split(``).map(x => 1 - x).reverse().join(``);
+    const arr = {
+        0: "0",
+    };
     
     for (let i = 1, z = n + 1; i < z; i++) {
-        const s = arr[i - 1];
-        arr.push(s + "1" + invertBits(s));
+        const s = arr[i - 1].toString();
+        arr[i] = s + "1" + s.split(``).map(x => 1 - x).reverse().join(``);
     }
     
-    return arr.at(-1)[k - 1];
+    return arr[n][k - 1];
 }
