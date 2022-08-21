@@ -11,12 +11,9 @@ var shortestCompletingWord = (licensePlate, words) => {
     return words.reduce((ans, w, i) => {
         const counter = freqOfWords[i];
         
-        if (chars.every(c => counter[c] >= freq[c])) {
-            if (ans.length > w.length)
-                ans = w;
-            else if (!ans)
-                ans = w;
-        }
+        if (chars.every(c => counter[c] >= freq[c]))
+            if (ans.length > w.length) ans = w;
+            else if (!ans) ans = w;
         
         return ans;
     }, ``);
