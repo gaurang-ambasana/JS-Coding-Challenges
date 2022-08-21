@@ -3,7 +3,7 @@
  * @param {string[]} words
  * @return {string}
  */
-var shortestCompletingWord = function(licensePlate, words) {
+var shortestCompletingWord = (licensePlate, words) => {
     const chars = licensePlate.replace(/[0-9]/g, '').replace(/\s/g, '').toLowerCase().split(``);
     const freq = chars.reduce((c, w) => (c[w] = (c[w] ?? 0) + 1, c), {});
                                                                                    const freqOfWords = words.map(x => x.toLowerCase().split(``).reduce((c, w) => (c[w] = (c[w] ?? 0) + 1, c), {}));
