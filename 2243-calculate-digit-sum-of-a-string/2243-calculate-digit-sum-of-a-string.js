@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {string}
  */
-const digitSum = (s, k) => {
+var digitSum = (s, k) => {
     const getSum = arr => arr.reduce((a, n) => parseInt(a) + parseInt(n), 0).toString();
     const regex = new RegExp(`.{1,${k}}`, `g`);
     while (s.length > k) {
