@@ -10,14 +10,20 @@
  * @return {boolean}
  */
 const isPalindrome = head => {
-    const arr = [head.val];
+    const { val, next } = head, 
+          arr = [val], 
+          arr1 = [val];
     
-    let node = head.next;
+    let node = next;
     
     while (node) {
-        arr.push(node.val);
-        node = node.next;
+        const { val, next } = node;
+        
+        arr.push(val);
+        arr1.unshift(val);
+        
+        node = next;
     }
     
-    return arr.join() === arr.reverse().join();
-}
+    return arr.join() === arr1.join();
+};
