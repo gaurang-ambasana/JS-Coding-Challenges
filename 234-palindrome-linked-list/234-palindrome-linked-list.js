@@ -1,4 +1,4 @@
-var isPalindrome = head => {
+var isPalindrome = function (head) {
     const { val, next } = head;
     const arr = [val];
     
