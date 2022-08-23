@@ -10,5 +10,5 @@ var isPalindrome = head => {
         node = next;
     }
     
-    return arr.join() === arr.reverse().join();
+    return arr.join(``) === arr.reverse().join(``);
 }
