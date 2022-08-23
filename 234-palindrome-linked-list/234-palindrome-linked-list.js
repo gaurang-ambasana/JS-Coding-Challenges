@@ -1,4 +1,4 @@
-const isPalindrome = head => {
+var isPalindrome = head => {
     const { val, next } = head;
     const arr = [val];
     
