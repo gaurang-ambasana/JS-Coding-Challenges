@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
+const isPalindrome = head => {
     const arr = [head.val];
     
     let node = head.next;
@@ -20,4 +20,4 @@ var isPalindrome = function(head) {
     }
     
     return arr.join() === arr.reverse().join();
-};
+}
