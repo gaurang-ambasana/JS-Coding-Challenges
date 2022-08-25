@@ -3,11 +3,4 @@
  * @param {number} k
  * @return {number}
  */
-const countKDifference = (nums, k, count = 0) => {
-    for (let i = 0, n = nums.length; i < n; i++)
-        for (let j = i + 1; j < n; j++)
-            if (Math.abs(nums[i] - nums[j]) === k)
-                count++;
-    
-    return count;
-}
+const countKDifference = (nums, k) => nums.reduce((count, n, i) => nums.slice(i + 1).reduce((c, x) => Math.abs(x - n) === k ? ++c : c, count), 0);
