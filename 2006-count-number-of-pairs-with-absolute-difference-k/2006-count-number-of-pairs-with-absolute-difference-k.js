@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {number}
  */
-var countKDifference = (nums, k) => {
+const countKDifference = (nums, k) => {
     let count = 0;
     
     for (let i = 0, n = nums.length; i < n; i++)
