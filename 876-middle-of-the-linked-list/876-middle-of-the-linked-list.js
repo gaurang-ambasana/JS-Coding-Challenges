@@ -13,8 +13,10 @@ const middleNode = function(head) {
     let l1 = head;
     let l2 = head;
     
-    while (l2 !== null && l2.next !== null)
-        [l1, l2] = [l1.next, l2.next.next];
+    while (l2 !== null && l2.next !== null) {
+        l1 = l1.next;
+        l2 = l2.next.next;
+    }
     
     return l1;
 };
