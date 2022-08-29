@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var middleNode = function(head) {
+const middleNode = function(head) {
     let l1 = head;
     let l2 = head;
     
