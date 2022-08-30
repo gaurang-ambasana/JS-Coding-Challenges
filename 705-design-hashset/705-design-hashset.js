@@ -1,14 +1,13 @@
-
 class MyHashSet {
-    constructor () {
+    constructor() {
         this.set = new Set();
     }
     
-    add (key) {
+    add(key) {
         this.set.add(key);
     }
     
-    remove (key) {
+    remove(key) {
         this.set.delete(key);
     }
     
