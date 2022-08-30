@@ -10,7 +10,7 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
+const addTwoNumbers = (l1, l2) => {
     let n1 = [l1.val];    
     let n2 = [l2.val];
     
