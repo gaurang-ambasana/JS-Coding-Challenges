@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const mergeNodes = (head) => {
+const mergeNodes = head => {
     let count = 0, node = head.next;
     
     const arr = [];
