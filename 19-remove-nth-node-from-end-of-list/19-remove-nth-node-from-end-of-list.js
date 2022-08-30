@@ -10,7 +10,7 @@
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function(head, n) {
+const removeNthFromEnd = (head, n) => {
     const { val, next } = head;
     
     const arr = [val];
@@ -21,8 +21,6 @@ var removeNthFromEnd = function(head, n) {
         arr.push(val);
         node = node.next;
     }
-    
-    console.log(arr);
     
     arr.splice(arr.length - n, 1);
     arr.reverse();
