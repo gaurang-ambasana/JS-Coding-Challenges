@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var mergeNodes = function(head) {
+var mergeNodes = head => {
     let count = 0, node = head.next;
     
     const arr = [];
