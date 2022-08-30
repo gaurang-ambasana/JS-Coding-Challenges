@@ -10,7 +10,7 @@
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = (head, n) => {
+const removeNthFromEnd = (head, n) => {
     const { val, next } = head;
     
     const arr = [val];
