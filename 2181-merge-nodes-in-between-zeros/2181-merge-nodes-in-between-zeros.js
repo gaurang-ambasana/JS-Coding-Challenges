@@ -19,12 +19,12 @@ const mergeNodes = function(head) {
         
         if (val) count += val;
         else {
-            arr.unshift(count);
+            arr.push(count);
             count = 0;
         }
         
         node = next;
     }
 
-    return arr.reduce((head, val) => new ListNode(val, head), null);
+    return arr.reverse().reduce((head, val) => new ListNode(val, head), null);
 }
