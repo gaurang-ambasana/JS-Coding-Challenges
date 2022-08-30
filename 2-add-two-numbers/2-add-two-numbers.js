@@ -27,7 +27,7 @@ var addTwoNumbers = function(l1, l2) {
         node2 = node2.next;
     }
     
-    const res = (BigInt(n1.join(``)) + BigInt(n2.join(``))).toString().split(``);
+    const res = (BigInt(n1.join(``)) + BigInt(n2.join(``))).toString();
     
-    return res.slice(1).reduce((head, val) => new ListNode(val, head), new ListNode(res[0]));
+    return res.split(``).slice(1).reduce((head, val) => new ListNode(val, head), new ListNode(res[0]));
 };
