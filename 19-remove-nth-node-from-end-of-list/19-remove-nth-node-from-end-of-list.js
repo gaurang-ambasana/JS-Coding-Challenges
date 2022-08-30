@@ -22,7 +22,7 @@ const removeNthFromEnd = (head, n) => {
         node = node.next;
     }
     
-    arr.splice(arr.length - n, 1);
+    arr.splice(0 - n, 1);
     arr.reverse();
     
     return arr.reduce((head, val) => new ListNode(val, head), null);
