@@ -25,5 +25,5 @@ const removeNthFromEnd = (head, n) => {
     arr.splice(arr.length - n, 1);
     arr.reverse();
     
-    return arr.length > 0 ? arr.slice(1).reduce((head, val) => new ListNode(val, head), new ListNode(arr[0])) : null;
+    return arr.reduce((head, val) => new ListNode(val, head), null);
 };
