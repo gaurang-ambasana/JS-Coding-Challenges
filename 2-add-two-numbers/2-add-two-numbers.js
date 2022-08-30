@@ -10,12 +10,10 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-const addTwoNumbers = (l1, l2) => {
-    let n1 = [l1.val];    
-    let n2 = [l2.val];
+var addTwoNumbers = (l1, l2) => {
+    let n1 = [l1.val], n2 = [l2.val];
     
-    let node1 = l1.next;
-    let node2 = l2.next;
+    let node1 = l1.next, node2 = l2.next;
     
     while (node1) {
         n1.unshift(node1.val);
