@@ -2,7 +2,7 @@
  * @param {number[]} heights
  * @return {number}
  */
-var largestRectangleArea = heights => {
+var largestRectangleArea = function(heights) {
     let ans = 0, i = 0;
     heights.push(0);
     
