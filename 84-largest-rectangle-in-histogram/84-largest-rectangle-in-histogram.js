@@ -4,6 +4,7 @@
  */
 var largestRectangleArea = heights => {
     let ans = 0, i = 0;
+    heights.push(0);
     
     const arr = [], n = heights.length;
     
@@ -14,11 +15,6 @@ var largestRectangleArea = heights => {
             const idx = arr.pop();
             ans = Math.max(ans, heights[idx] * (arr.length ? i - arr.at(-1) - 1 : i));
         }
-    }
-    
-    while (arr.length) {
-        const idx = arr.pop();
-        ans = Math.max(ans, heights[idx] * (arr.length ? i - arr.at(-1) - 1 : i));
     }
     
     return ans;
