@@ -13,7 +13,7 @@
 const goodNodes = function(root) {
     let count = 0;
     
-    function check(node, max) {
+    const check = (node, max) => {
         const { val, left, right } = node;
             
         if (val >= max) {
