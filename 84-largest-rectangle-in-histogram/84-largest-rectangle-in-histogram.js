@@ -2,12 +2,12 @@
  * @param {number[]} heights
  * @return {number}
  */
-var largestRectangleArea = heights => {
+const largestRectangleArea = heights => {
     let ans = 0, i = 0;
     
-    const arr = [];
+    const arr = [], n = heights.length;
     
-    while (i < heights.length) {
+    while (i < n) {
         if (!arr.length || heights[i] > heights[arr.at(-1)])
             arr.push(i++);
         else {
