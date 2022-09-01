@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var goodNodes = function(root) {
+const goodNodes = function(root) {
     let count = 0;
     
     function check(node, max) {
