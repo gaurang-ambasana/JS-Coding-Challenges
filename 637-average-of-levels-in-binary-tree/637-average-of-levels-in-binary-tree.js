@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-const averageOfLevels = function(root) {
+var averageOfLevels = function(root) {
     const res = [];
     const queue = [root];
     
