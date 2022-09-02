@@ -11,7 +11,7 @@
  * @return {number[]}
  */
 const averageOfLevels = function(root) {
-    const ans = [];
+    const res = [];
     const queue = [root];
     
     let sum = 0, count = 0, tmp = [];
@@ -26,7 +26,7 @@ const averageOfLevels = function(root) {
         right && tmp.push(right);
         
         if (queue.length === 0) {
-            ans.push(sum / count);
+            res.push(sum / count);
             queue.push(...tmp);
             
             count = 0;
@@ -35,5 +35,5 @@ const averageOfLevels = function(root) {
         }
     }
     
-    return ans;
+    return res;
 }
