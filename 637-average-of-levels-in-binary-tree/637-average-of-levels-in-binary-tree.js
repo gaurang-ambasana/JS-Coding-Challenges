@@ -25,7 +25,7 @@ const averageOfLevels = function(root) {
         left && tmp.push(left);
         right && tmp.push(right);
         
-        if (queue.length === 0) {
+        if (!queue.length) {
             res.push(sum / count);
             queue.push(...tmp);
             
