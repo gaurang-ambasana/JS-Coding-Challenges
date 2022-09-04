@@ -10,8 +10,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var sumOfLeftLeaves = function(root) {
-    
+function sumOfLeftLeaves(root) {
     function traverse(node, isLeft) {
         if (node) {
             const { val, left, right } = node;
