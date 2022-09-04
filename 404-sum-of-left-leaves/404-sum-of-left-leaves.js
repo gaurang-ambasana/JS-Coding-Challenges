@@ -22,4 +22,4 @@ function sumOfLeftLeaves(root) {
     }
     
     return traverse(root, false);
-};
+}
