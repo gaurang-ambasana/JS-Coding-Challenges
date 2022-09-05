@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
+const levelOrder = function(root) {
     if (root === null) return [];
     
     const queue = [root], ans = [], tmp = [], tmpVals = [];
