@@ -1,13 +1,13 @@
 class MyCalendar {
     constructor() {
-        this.cal = [];
+        this.calendar = [];
     }
     
     book(start, end) {
-        if (this.cal.find(([st, et]) => start < et && end > st))
+        if (this.calendar.find(([st, et]) => start < et && end > st))
             return false;
         
-        this.cal.push([start, end]);
+        this.calendar.push([start, end]);
         return true;
     }
 }
