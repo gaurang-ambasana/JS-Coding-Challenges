@@ -9,6 +9,7 @@ class MyCalendar {
                 return false;
         
         this.cal.push([start, end]);
+        
         return true;
     }
 }
