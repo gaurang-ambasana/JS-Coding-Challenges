@@ -11,7 +11,7 @@
  * @return {TreeNode}
  */
 function pruneTree(root) {
-    if (root === null) return null;
+    if (!root) return null;
 
     if (!pruneTree(root.left))
         root.left = null;
