@@ -3,7 +3,7 @@ class MyCalendar {
         this.cal = [];
     }
     
-    book (start, end) {
+    book(start, end) {
         for (let i = 0, n = this.cal.length; i < n; i++)
             if (start < this.cal[i][1] && end > this.cal[i][0])
                 return false;
