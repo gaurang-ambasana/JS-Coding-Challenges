@@ -23,4 +23,4 @@ function pruneTree(root) {
         return root;
     
     return null;
-};
+}
