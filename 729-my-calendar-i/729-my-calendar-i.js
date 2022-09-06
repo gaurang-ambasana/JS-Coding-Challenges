@@ -1,6 +1,6 @@
 class MyCalendar {
     constructor() {
-        this.calendar = [];
+        this.calendar = new Array();
     }
     
     book(start, end) {
