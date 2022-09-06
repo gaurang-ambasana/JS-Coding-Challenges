@@ -7,14 +7,9 @@ function pivotIndex(nums) {
     
     let runningSum = 0
     
-    for (let i = 0, n = nums.length; i < n; i++) {
-        const n = nums[i];
-        
+    return nums.findIndex(n => {
         if (runningSum === total - n - runningSum)
-            return i;
-        
+            return true;
         runningSum += n;
-    }
-    
-    return -1;
+    });
 }
