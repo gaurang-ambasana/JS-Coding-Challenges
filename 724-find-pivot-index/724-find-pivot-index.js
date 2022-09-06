@@ -2,14 +2,15 @@
  * @param {number[]} nums
  * @return {number}
  */
-var pivotIndex = nums => {
-    const total = nums.reduce((sum, e) => sum + e, 0);
+var pivotIndex = function(nums) {
+    const total = nums.reduce((s, n) => s + n, 0);
     
-    let leftSum = 0;
+    for (let i = 0, n = nums.length; i < n; i++) {
+        const leftSum = nums.slice(0, i).reduce((s, n) => s + n, 0);
+        
+        if (leftSum === total - nums[i] - leftSum)
+            return i;
+    }
     
-    return nums.findIndex(n => {
-        if (leftSum === total - n - leftSum)
-            return true;
-        leftSum += n;
-    });
+    return -1;
 }
