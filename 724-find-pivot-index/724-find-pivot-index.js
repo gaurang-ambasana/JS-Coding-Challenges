@@ -5,13 +5,15 @@
 function pivotIndex(nums) {
     const total = nums.reduce((s, n) => s + n, 0);
     
-    let leftSum = 0
+    let runningSum = 0
     
     for (let i = 0, n = nums.length; i < n; i++) {
         const n = nums[i];
-        if (leftSum === total - n - leftSum)
+        
+        if (runningSum === total - n - runningSum)
             return i;
-        leftSum += n;
+        
+        runningSum += n;
     }
     
     return -1;
