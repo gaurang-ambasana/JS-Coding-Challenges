@@ -1,16 +1,14 @@
-
 class MyCalendar {
     constructor() {
         this.cal = [];
     }
-
-    book (start, end) {
-        for (let i = 0, n = this.cal.length; i < n; i++)
-            if (start < this.cal[i][1] && end > this.cal[i][0])
-                return false;
-        
-        this.cal.push([start, end]);
-        
-        return true;
+    
+    book(start, end) {
+        if (this.cal.some(([st, et]) => start < et && end > st))
+            return false;
+        else {
+            this.cal.push([start, end]);
+            return true;
+        }
     }
 }
