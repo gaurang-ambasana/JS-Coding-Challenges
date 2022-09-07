@@ -3,7 +3,7 @@
  * @param {string} t
  * @return {boolean}
  */
-var isSubsequence = function(s, t) {
+function isSubsequence(s, t) {
     for (let i = 0, n = s.length; i < n; i++) {
         const idx = t.indexOf(s[i]);
         
