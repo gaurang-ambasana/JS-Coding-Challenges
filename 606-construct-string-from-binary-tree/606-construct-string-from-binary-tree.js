@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {string}
  */
-var tree2str = function(root) {
+function tree2str(root) {
     const { val, left, right } = root;
     
     let ans = val.toString();
