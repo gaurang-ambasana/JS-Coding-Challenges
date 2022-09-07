@@ -3,17 +3,25 @@
  * @param {string} t
  * @return {boolean}
  */
-var isIsomorphic = (s, t) => {
-    const hash1 = {}, hash2 = {};
-    
-    for (let i = 0, n = s.length; i < n; i++) {
-        const [c1, c2] = [s[i], t[i]];
+function isIsomorphic(s, t) {
+    function getPattern(str) {
+        const map = {};
         
-        if (!hash2[c2] && !hash1[c1])
-            [hash1[c1], hash2[c2]] = [c2, c1];
-        else if (hash1[c1] !== c2 || hash2[c2] !== c1)
-            return false;
+        let id = 0, pattern = ``;
+        
+        for (let i = 0, n = str.length; i < n; i++) {
+            const char = str[i];
+            
+            if (char in map)
+                pattern += map[char];
+            else {
+                map[char] = ++id;
+                pattern += map[char];
+            }
+        }
+        
+        return pattern;
     }
     
-    return true;
+    return getPattern(s) === getPattern(t);
 }
