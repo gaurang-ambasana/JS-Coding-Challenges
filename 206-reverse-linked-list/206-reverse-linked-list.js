@@ -10,10 +10,7 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-    if (head === null) return null;
-    
-    let { val, next: node } = head;
-    let list = new ListNode(val, null);
+    let list = null, node = head;
     
     while (node) {
         const { val, next } = node;
