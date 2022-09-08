@@ -19,7 +19,9 @@ function inorderTraversal(root) {
         const { left, val, right } = node;
         
         left && traverse(left);
+        
         ans.push(val);
+        
         right && traverse(right);
     }
     
