@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var postorderTraversal = function(root) {
+function postorderTraversal(root) {
     if (root === null) return [];
     
     const ans = [];
