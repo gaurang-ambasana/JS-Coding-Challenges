@@ -9,8 +9,11 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const reverseList = (head) => {
-    let list = null, node = head;
+var reverseList = function(head) {
+    if (head === null) return null;
+    
+    let { val, next: node } = head;
+    let list = new ListNode(val, null);
     
     while (node) {
         const { val, next } = node;
