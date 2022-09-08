@@ -13,19 +13,19 @@
 function inorderTraversal(root) {
     if (root === null) return [];
     
-    const ans = [];
+    const ans = [], stack = [];
+    let cur = root;
     
-    function traverse(node) {
-        const { left, val, right } = node;
+    while (cur || stack.length) {
+        while (cur) {
+            stack.push(cur);
+            cur = cur.left;
+        }
         
-        left && traverse(left);
-        
+        const { val, right } = stack.pop();
         ans.push(val);
-        
-        right && traverse(right);
+        cur = right;
     }
-    
-    traverse(root);
     
     return ans;
 }
