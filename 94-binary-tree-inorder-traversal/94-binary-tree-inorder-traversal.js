@@ -13,17 +13,17 @@
 function inorderTraversal(root) {
     if (root === null) return [];
     
-    const arr = [];
+    const ans = [];
     
     function traverse(node) {
         const { left, val, right } = node;
         
         left && traverse(left);
-        arr.push(val);
+        ans.push(val);
         right && traverse(right);
     }
     
     traverse(root);
     
-    return arr;
+    return ans;
 }
