@@ -22,4 +22,4 @@ var detectCycle = function(head) {
     }
     
     return null;
-};
+}
