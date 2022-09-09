@@ -9,11 +9,10 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const middleNode = function(head) {
-    let l1 = head;
-    let l2 = head;
+var middleNode = function(head) {
+    let l1 = head, l2 = head;
     
-    while (l2 !== null && l2.next !== null) {
+    while (l2 && l2.next) {
         l1 = l1.next;
         l2 = l2.next.next;
     }
