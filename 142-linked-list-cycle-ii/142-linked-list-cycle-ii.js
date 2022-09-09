@@ -13,12 +13,10 @@
 var detectCycle = function(head) {
     const set = new Set();
     
-    while (head) {
-        const node = head;
-        
-        if (set.has(node))
+    while (head) { 
+        if (set.has(head))
             return head;
-        set.add(node);
+        set.add(head);
         
         head = head.next;
     }
