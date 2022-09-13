@@ -22,7 +22,7 @@ const levelOrder = function(root) {
         right && tmp.push(right);
         
         if (queue.length === 0) {
-            queue.push(...tmp)
+            queue.push(...tmp);
             tmp.length = 0;
             ans.push([...tmpVals]);
             tmpVals.length = 0;
