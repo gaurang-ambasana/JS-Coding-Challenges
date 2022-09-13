@@ -12,12 +12,12 @@
  * @param {function} isBadVersion()
  * @return {function}
  */
-var solution = function(isBadVersion) {
+const solution = isBadVersion => {
     /**
      * @param {integer} n Total versions
      * @return {integer} The first bad version
      */
-    return (n) => {
+    return n => {
         let left = 1, right = n;
         
         while (left < right) {
