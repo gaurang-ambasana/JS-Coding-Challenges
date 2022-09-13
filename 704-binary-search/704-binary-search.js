@@ -1,4 +1,4 @@
-var search = (nums, target) => {
+function search(nums, target) {
     let left = 0, right = nums.length - 1;
     
     while (left <= right) {
@@ -12,4 +12,4 @@ var search = (nums, target) => {
     }
     
     return -1;
-}
+};
