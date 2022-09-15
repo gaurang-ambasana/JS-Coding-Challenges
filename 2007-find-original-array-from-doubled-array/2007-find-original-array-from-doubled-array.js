@@ -2,7 +2,7 @@
  * @param {number[]} changed
  * @return {number[]}
  */
-function findOriginalArray(changed) {
+var findOriginalArray = (changed) => {
     if (changed.length % 2 !== 0) return [];
     
     changed.sort((a, b) => a - b);
@@ -14,9 +14,7 @@ function findOriginalArray(changed) {
         
         if (curr in map) {
             const freq = map[curr];
-            
-            if (freq === 1)
-                delete map[curr];
+            if (freq === 1) delete map[curr];
             else map[curr] = freq - 1;
         } else {
             const double = curr * 2;
