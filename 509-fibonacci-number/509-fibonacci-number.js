@@ -3,10 +3,10 @@
  * @return {number}
  */
 var fib = (n) => {
-    const s = [0, 1];
+    const s = [0, 1], x = n + 1;
     
-    for (let i = 2; i < n + 1; i++)
-        s.push(s[i - 1] + s[i - 2]);
+    while (s.length < x)
+        s.push(s.at(-1) + s.at(-2));
     
     return s[n];
 }
