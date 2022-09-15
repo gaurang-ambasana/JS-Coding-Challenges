@@ -14,15 +14,14 @@ function preorder(root) {
     const arr = [];
     
     function traverse(node) {
-        if (node === null) return;
         const { val, children } = node;
         arr.push(val);
         
         for (let i = 0, n = children.length; i < n; i++)
-            traverse(children[i]);
+            children[i] && traverse(children[i]);
     }
     
-    traverse(root);
+    root && traverse(root);
     
     return arr;
 }
