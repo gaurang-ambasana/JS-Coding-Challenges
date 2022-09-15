@@ -23,5 +23,5 @@ const findOriginalArray = (changed) => {
         }
     }
     
-    return Object.values(map).length > 0 ? [] : ans;
+    return Object.keys(map).length > 0 ? [] : ans;
 };
