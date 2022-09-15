@@ -2,7 +2,7 @@
  * @param {number[]} changed
  * @return {number[]}
  */
-const findOriginalArray = changed => {
+const findOriginalArray = (changed) => {
     if (changed.length % 2 !== 0) return [];
     
     changed.sort((a, b) => a - b);
