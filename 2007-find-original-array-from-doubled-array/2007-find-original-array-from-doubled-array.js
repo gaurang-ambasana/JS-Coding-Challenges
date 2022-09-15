@@ -9,7 +9,9 @@ var findOriginalArray = (changed) => {
     
     const map = {}, ans = [];
     
-    for (const curr of changed) {
+    for (const i in changed) {
+        const curr = changed[i];
+        
         if (curr in map) {
             const freq = map[curr];
             if (freq === 1) delete map[curr];
