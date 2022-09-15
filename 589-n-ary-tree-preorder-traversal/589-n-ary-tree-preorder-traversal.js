@@ -10,7 +10,7 @@
  * @param {Node|null} root
  * @return {number[]}
  */
-var preorder = function(root) {
+function preorder(root) {
     const arr = [];
     
     function traverse(node) {
@@ -25,4 +25,4 @@ var preorder = function(root) {
     traverse(root);
     
     return arr;
-};
+}
