@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
+var climbStairs = (n) => {
     const a = [1, 1], x = n + 1;
     
     while (a.length !== n + 1) 
