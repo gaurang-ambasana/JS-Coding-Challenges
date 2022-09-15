@@ -2,14 +2,14 @@
  * @param {number[]} changed
  * @return {number[]}
  */
-var findOriginalArray = (changed) => {
+const findOriginalArray = changed => {
     if (changed.length % 2 !== 0) return [];
     
     changed.sort((a, b) => a - b);
     
     const map = {}, ans = [];
     
-    for (const i in changed) {
+    for (let i = 0, n = changed.length; i < n; i++) {
         const curr = changed[i];
         
         if (curr in map) {
