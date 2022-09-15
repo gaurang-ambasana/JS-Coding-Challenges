@@ -3,10 +3,10 @@
  * @return {number}
  */
 var climbStairs = n => {
-    const a = [1, 1], x = n + 1;
+    const arr = [1, 1], x = n + 1;
     
-    while (a.length !== n + 1) 
-        a.push(a.at(-1) + a.at(-2));
+    while (arr.length !== n + 1) 
+        arr.push(arr.at(-1) + arr.at(-2));
     
-    return a[n];
+    return arr[n];
 };
