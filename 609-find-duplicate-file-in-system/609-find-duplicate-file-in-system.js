@@ -6,11 +6,11 @@ var findDuplicate = function(paths) {
         
         for (let c = 0, n = files.length; c < n; c++) {
             const file = files[c];
-            const content = file.split(`(`)[1];
+            const [fileName, content] = file.split(`(`);
             
             if (content in table)
-                table[content].push(`${path}/${file.split(`(`)[0]}`);
-            else table[content] = [`${path}/${file.split(`(`)[0]}`];
+                table[content].push(`${path}/${fileName}`);
+            else table[content] = [`${path}/${fileName}`];
         }
     }
     
