@@ -4,8 +4,8 @@ var findDuplicate = function(paths) {
     for (let i = 0, n = paths.length; i < n; i++) {
         const [path, ...files] = paths[i].split(` `);
         
-        for (let c = 0, n = files.length; c < n; c++) {
-            const file = files[c];
+        for (let j = 0, n = files.length; j < n; j++) {
+            const file = files[j];
             const [fileName, content] = file.split(`(`);
             
             if (content in table)
