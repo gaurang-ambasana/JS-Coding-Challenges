@@ -2,7 +2,7 @@
  * @param {string[]} paths
  * @return {string[][]}
  */
-var findDuplicate = function(paths) {
+function findDuplicate(paths) {
     const table = {};
     
     for (let i = 0, n = paths.length; i < n; i++) {
@@ -19,4 +19,4 @@ var findDuplicate = function(paths) {
     }
     
     return Object.values(table).filter(({ length }) => length > 1);
-};
+}
