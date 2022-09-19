@@ -10,7 +10,7 @@ const findDuplicate = (paths) => {
         
         for (let c = 0, n = files.length; c < n; c++) {
             const file = files[c];
-            const content = file.match(/\(([^)]+)\)/g);
+            const content = file.split('(')[1];
             
             if (content in table)
                 table[content].push(`${path}/${file.split(`(`)[0]}`);
