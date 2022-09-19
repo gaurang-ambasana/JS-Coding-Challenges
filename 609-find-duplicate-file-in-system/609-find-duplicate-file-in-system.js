@@ -1,8 +1,4 @@
-/**
- * @param {string[]} paths
- * @return {string[][]}
- */
-const findDuplicate = (paths) => {
+var findDuplicate = function(paths) {
     const table = {};
     
     for (let i = 0, n = paths.length; i < n; i++) {
@@ -10,7 +6,7 @@ const findDuplicate = (paths) => {
         
         for (let c = 0, n = files.length; c < n; c++) {
             const file = files[c];
-            const content = file.split('(')[1];
+            const content = file.match(/\(([^)]+)\)/g);
             
             if (content in table)
                 table[content].push(`${path}/${file.split(`(`)[0]}`);
