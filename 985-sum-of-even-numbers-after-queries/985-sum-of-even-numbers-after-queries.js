@@ -3,7 +3,7 @@
  * @param {number[][]} queries
  * @return {number[]}
  */
-const sumEvenAfterQueries = (nums, queries) => {
+var sumEvenAfterQueries = function(nums, queries) {
     let sum = nums.filter(x => x % 2 === 0).reduce((sum, x) => sum + x, 0);
     
     return queries.map(([n, i]) => {
