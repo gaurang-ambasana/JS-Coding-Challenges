@@ -2,4 +2,11 @@
  * @param {string} s
  * @return {string}
  */
-var reverseWords = s => s.split(` `).map(w => w.split(``).reverse().join(``)).join(` `);
+var reverseWords = s => {
+    const words = s.split(` `);
+    
+    for (let i = 0, n = words.length; i< n; i++)
+        words[i] = words[i].split(``).reverse().join(``);
+    
+    return words.join(` `);
+}
