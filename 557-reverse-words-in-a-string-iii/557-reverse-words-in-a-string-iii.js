@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {string}
  */
-var reverseWords = s => {
+const reverseWords = s => {
     const words = s.split(` `);
     
     for (let i = 0, n = words.length; i< n; i++)
