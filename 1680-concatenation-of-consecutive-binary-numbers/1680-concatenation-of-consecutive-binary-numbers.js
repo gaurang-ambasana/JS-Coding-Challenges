@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {number}
  */
-const concatenatedBinary = n => {
+var concatenatedBinary = n => {
     let ans = 1, len = 4;
     
     for (let i = 2, x = n + 1; i < x; i++) {
