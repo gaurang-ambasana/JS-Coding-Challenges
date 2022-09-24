@@ -28,7 +28,7 @@ var hasPathSum = function(root, targetSum) {
         
         left && traverse(left, path, diff - val);
         right && traverse(right, path, diff - val);
-    }
+    };
     
     root && traverse(root, [], targetSum);
     
