@@ -14,7 +14,7 @@
 var pathSum = function(root, targetSum) {
     const ans = [];
     
-    function traverse(node, path, diff) {
+    const traverse = (node, path, diff) => {
         const { val, left, right } = node;
         
         if (diff === val && !left && !right) {
