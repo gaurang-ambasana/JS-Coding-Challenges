@@ -21,8 +21,7 @@ var hasPathSum = function(root, targetSum) {
         
         diff -= val;
         
-        if (diff === 0 && !left && !right)
-            ans = true;
+        if (diff === 0 && !left && !right) ans = true;
         else path.push(val);
         
         left && traverse(left, path, diff);
