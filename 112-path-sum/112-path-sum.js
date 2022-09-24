@@ -21,10 +21,12 @@ var hasPathSum = function(root, targetSum) {
         
         const { val, left, right } = node;
         
-        if (diff === val && !left && !right) ans = true;
+        diff -= val;
         
-        left && traverse(left, [...path, val], diff - val);
-        right && traverse(right, [...path, val], diff - val);
+        if (diff === 0 && !left && !right) ans = true;
+        
+        left && traverse(left, [...path, val], diff);
+        right && traverse(right, [...path, val], diff);
     }
     
     root && traverse(root, [], targetSum);
