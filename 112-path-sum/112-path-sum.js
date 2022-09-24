@@ -31,4 +31,4 @@ function hasPathSum(root, targetSum) {
     root && traverse(root, [], targetSum);
     
     return ans;
-};
+}
