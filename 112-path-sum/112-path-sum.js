@@ -19,13 +19,11 @@ var hasPathSum = function(root, targetSum) {
         
         const { val, left, right } = node;
         
-        diff -= val;
-        
-        if (!diff && !left && !right) ans = true;
+        if (diff === val && !left && !right) ans = true;
         else path.push(val);
         
-        left && traverse(left, path, diff);
-        right && traverse(right, path, diff);
+        left && traverse(left, path, diff - val);
+        right && traverse(right, path, diff - val);
     }
     
     root && traverse(root, [], targetSum);
