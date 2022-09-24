@@ -12,8 +12,6 @@
  * @return {boolean}
  */
 var hasPathSum = function(root, targetSum) {
-    if (root === null) return false;
-    
     let ans = false;
     
     const traverse = (node, path, diff) => {
