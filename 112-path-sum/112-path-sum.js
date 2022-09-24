@@ -11,7 +11,7 @@
  * @param {number} targetSum
  * @return {boolean}
  */
-const hasPathSum = function(root, targetSum) {
+function hasPathSum(root, targetSum) {
     let ans = false;
     
     const traverse = (node, path, diff) => {
