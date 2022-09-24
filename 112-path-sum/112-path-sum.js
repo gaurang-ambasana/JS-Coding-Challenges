@@ -19,7 +19,7 @@ var hasPathSum = function(root, targetSum) {
         
         const { val, left, right } = node;
         
-        if (diff === val && !left && !right) {
+        if (diff === val && left === null && right === null) {
             ans = true;
             return;
         }
