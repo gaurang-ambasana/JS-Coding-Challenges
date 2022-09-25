@@ -6,7 +6,7 @@ class MyCircularQueue {
         this.pointer = k;
         this.max = k;
         this.q = [];
-    };
+    }
     
     /** 
      * @param {number} value
@@ -18,7 +18,7 @@ class MyCircularQueue {
             this.q.push(value);
             return true;
         } else return false;
-    };
+    }
     
     
     /**
@@ -30,33 +30,33 @@ class MyCircularQueue {
         this.pointer++;
         this.q.shift();
         return true;
-    };
+    }
     
     /**
      * @return {number}
      */
     Front() {
         return this.q.length ? this.q[0] : -1;
-    };
+    }
     
     /**
      * @return {number}
      */
     Rear() {
         return this.q.length ? this.q.at(-1) : -1;
-    };
+    }
 
     /**
      * @return {boolean}
      */
     isEmpty() {
         return this.q.length === 0;
-    };
+    }
 
     /**
      * @return {boolean}
      */
     isFull() {
         return this.q.length === this.max;
-    };
+    }
 }
