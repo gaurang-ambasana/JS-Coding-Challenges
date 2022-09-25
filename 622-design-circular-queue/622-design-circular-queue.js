@@ -1,7 +1,7 @@
-/**
- * @param {number} k
- */
 class MyCircularQueue {
+    /**
+     * @param {number} k
+     */
     constructor(k) {
         this.pointer = k;
         this.max = k;
