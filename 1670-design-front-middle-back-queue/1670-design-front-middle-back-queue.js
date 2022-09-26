@@ -21,7 +21,7 @@ class FrontMiddleBackQueue {
     }
         
     popMiddle() {
-        return (this.q.length % 2) ? this.q.splice(Math.floor(this.q.length / 2), 1)[0] : this.q.splice(Math.floor((this.q.length - 1) / 2), 1)[0] ?? -1;
+        return this.q.length % 2 ? this.q.splice(Math.floor(this.q.length / 2), 1)[0] : this.q.splice(Math.floor((this.q.length - 1) / 2), 1)[0] ?? -1;
     }
         
     popBack() {
