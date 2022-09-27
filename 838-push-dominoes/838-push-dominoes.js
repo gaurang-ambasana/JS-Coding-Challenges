@@ -3,9 +3,10 @@
  * @return {string}
  */
 var pushDominoes = function(dominoes) {
-    let newDominoes;
+    // let newDominoes;
+    
     while (true) {
-        newDominoes = dominoes.replaceAll(`R.L`, `_`).replaceAll(`.L`, `LL`).replaceAll(`R.`, `RR`).replaceAll(`_`, `R.L`);
+        const newDominoes = dominoes.replaceAll(`R.L`, `_`).replaceAll(`.L`, `LL`).replaceAll(`R.`, `RR`).replaceAll(`_`, `R.L`);
         if (newDominoes === dominoes)
             return newDominoes;
         else dominoes = newDominoes;
