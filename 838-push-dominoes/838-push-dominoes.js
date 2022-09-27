@@ -9,4 +9,4 @@ function pushDominoes(dominoes) {
             return newDominoes;
         else dominoes = newDominoes;
     }
-};
+}
