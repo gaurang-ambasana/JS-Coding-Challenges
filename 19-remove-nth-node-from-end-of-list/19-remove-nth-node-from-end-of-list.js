@@ -10,20 +10,16 @@
  * @param {number} n
  * @return {ListNode}
  */
-const removeNthFromEnd = (head, n) => {
-    const { val, next } = head;
-    
-    const arr = [val];
-    let node = next;
+var removeNthFromEnd = function(head, n) {
+    let node = head, arr = [];
     
     while (node) {
         const { val, next } = node;
         arr.push(val);
-        node = node.next;
+        node = next;
     }
     
-    arr.splice(0 - n, 1);
-    arr.reverse();
+    arr.splice(-n, 1);
     
-    return arr.reduce((head, val) => new ListNode(val, head), null);
+    return arr.reverse().reduce((list, val) => new ListNode(val, list), null);
 };
