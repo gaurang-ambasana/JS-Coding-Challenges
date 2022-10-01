@@ -11,8 +11,6 @@ var numDecodings = function(s) {
         const oneDigit = parseInt(s.substring(i - 1, i));
         const twoDigit = parseInt(s.substring(i - 2, i));
         
-        console.log(oneDigit, twoDigit);
-        
         if (oneDigit > 0)
             dp[i] += dp[i - 1];
         
