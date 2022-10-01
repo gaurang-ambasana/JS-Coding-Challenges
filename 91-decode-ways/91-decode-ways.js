@@ -8,8 +8,8 @@ var numDecodings = function(s) {
     dp[1] = s[0] === '0' ? 0 : 1;
     
     for(let i = 2, n = s.length + 1; i < n; i++) {
-        const oneDigit = parseInt(s.substring(i - 1, i));
-        const twoDigit = parseInt(s.substring(i - 2, i));
+        const oneDigit = Number(s.substring(i - 1, i));
+        const twoDigit = Number(s.substring(i - 2, i));
         
         if (oneDigit > 0)
             dp[i] += dp[i - 1];
