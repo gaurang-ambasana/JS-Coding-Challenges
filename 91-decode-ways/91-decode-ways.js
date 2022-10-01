@@ -18,5 +18,5 @@ var numDecodings = function(s) {
             dp[i] += dp[i - 2];
     }
     
-    return dp[s.length];
+    return dp.at(-1);
 };
