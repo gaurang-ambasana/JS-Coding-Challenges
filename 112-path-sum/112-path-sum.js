@@ -11,24 +11,24 @@
  * @param {number} targetSum
  * @return {boolean}
  */
-function hasPathSum(root, targetSum) {
-    let ans = false;
+var hasPathSum = function(root, targetSum) {
+    let flag = false;
     
-    const traverse = (node, path, diff) => {
-        if (ans) return;
+    function traverse(node, path, diff) {
+        if (flag) return;
         
         const { val, left, right } = node;
         
-        if (diff === val && left === null && right === null) {
-            ans = true;
+        if (val === diff && left === null && right === null) {
+            flag = true;
             return;
         }
         
         left && traverse(left, [...path, val], diff - val);
         right && traverse(right, [...path, val], diff - val);
-    };
+    }
     
     root && traverse(root, [], targetSum);
-    
-    return ans;
-}
+        
+    return flag;
+};
