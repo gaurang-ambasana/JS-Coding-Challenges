@@ -16,7 +16,8 @@ var addOneRow = function(root, val, depth) {
     if (depth === 1)
         return new TreeNode(val, root);
     
-    let arr = [root], currentDepth = 1, x = depth - 1;
+    let arr = [root], currentDepth = 1;
+    const x = depth - 1;
     
     while (currentDepth < x) {
         const tmp = [];
