@@ -23,7 +23,7 @@ var addOneRow = function(root, val, depth) {
         const tmp = [];
         
         while (arr.length > 0) {
-            const { left, right } = arr.pop();
+            const { left, right } = arr.shift();
             left && tmp.push(left);
             right && tmp.push(right);
         }
@@ -33,7 +33,7 @@ var addOneRow = function(root, val, depth) {
     }
     
     while (arr.length > 0) {
-        const node = arr.pop();
+        const node = arr.shift();
         const { left: tmpLeft, right: tmpRight } = node;
         node.left = new TreeNode(val, tmpLeft, null);
         node.right = new TreeNode(val, null, tmpRight);
