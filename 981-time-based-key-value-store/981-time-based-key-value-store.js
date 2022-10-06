@@ -10,12 +10,9 @@ class TimeMap {
     }
     
     get(key, timestamp) {
-        if (!(key in this.map))
+        if (!(key in this.map) || timestamp < this.map[key][0][0])
             return ``;
-        
-        if (timestamp < this.map[key][0][0])
-            return ``;
-        
+    
         let left = 0, right = this.map[key].length;
         
         while (left < right) {
