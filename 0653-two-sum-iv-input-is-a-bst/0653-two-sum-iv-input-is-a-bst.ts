@@ -12,7 +12,7 @@
  * }
  */
 
-function findTarget(root: TreeNode | null, k: number): boolean {
+function findTarget(root: TreeNode, k: number): boolean {
     const set: Set<number> = new Set();
     
     let flag: boolean = false;
