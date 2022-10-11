@@ -36,4 +36,4 @@ function findTarget(root: TreeNode | null, k: number): boolean {
     traverse(root);
 
     return flag;
-};
+}
