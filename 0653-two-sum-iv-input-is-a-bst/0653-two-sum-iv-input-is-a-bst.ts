@@ -33,7 +33,7 @@ function findTarget(root: TreeNode | null, k: number): boolean {
         right && traverse(right);
     }
 
-    traverse(root);
+    root && traverse(root);
 
     return flag;
 }
