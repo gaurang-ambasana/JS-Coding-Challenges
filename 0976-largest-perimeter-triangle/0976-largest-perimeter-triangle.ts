@@ -6,9 +6,10 @@ function largestPerimeter(nums: number[]): number {
         const b: number = nums[i - 1];
         const c: number = nums[i - 2];
         
-        if (b + c > a) {
-            return a + b + c;
-        }
+        const sides: number = b + c;
+        
+        if (sides > a)
+            return a + sides;
     }
     
     return 0;
