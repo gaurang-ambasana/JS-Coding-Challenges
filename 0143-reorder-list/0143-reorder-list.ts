@@ -16,7 +16,7 @@
 function reorderList(head: ListNode | null): void {
     const arr: Array<number> = [];
 
-    let node: ListNode | null = head, i: boolean = true;
+    let node: ListNode | null = head.next, i: boolean = true;
 
     while (node) {
         const { val, next } = node;
@@ -24,14 +24,13 @@ function reorderList(head: ListNode | null): void {
         node = next;
     }
 
-    node = head;
+    node = head.next;
 
     while (node) {
         const { next } : ListNode = node;
         
-        if (i)
-            node.val = arr.shift();
-        else node.val = arr.pop();
+        if (i) node.val = arr.pop();
+        else node.val = arr.shift();
         
         i = !i;
         node = next;
