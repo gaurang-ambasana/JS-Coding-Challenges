@@ -35,4 +35,4 @@ function reorderList(head: ListNode | null): void {
         i = !i;
         node = next;
     }
-};
+}
