@@ -31,7 +31,7 @@ function increasingBST(root: TreeNode | null): TreeNode | null {
     
     let tmp: TreeNode = tree;
     
-    for (let i: number = 1, n: number = arr.length; i < n; i++) {
+    for (let i = 1, n = arr.length; i < n; i++) {
         tmp.right = new TreeNode(arr[i]);
         tmp = tmp.right;
     }
