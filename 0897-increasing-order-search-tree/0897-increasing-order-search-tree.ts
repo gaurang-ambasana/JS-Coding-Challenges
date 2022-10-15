@@ -1,7 +1,7 @@
 function increasingBST(root: TreeNode | null): TreeNode | null {
     const arr: Array<number> = [];
     
-    function traverse(node: TreeNode) {
+    function traverse(node: TreeNode): void {
         const { left, val, right } : TreeNode | null = node;
         
         arr.push(val);
