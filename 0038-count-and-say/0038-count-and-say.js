@@ -13,7 +13,7 @@ const helper = (str) => {
         }
     }
 
-    return entries.map((e) => e.join(``)).join(``);
+    return entries.map(e => e.join(``)).join(``);
 };
 
 const countAndSay = (n) => {
@@ -23,4 +23,4 @@ const countAndSay = (n) => {
       str = helper(str);
 
   return str;
-}
+};
