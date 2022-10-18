@@ -16,7 +16,7 @@ const helper = (str) => {
     return entries.map(e => e.join(``)).join(``);
 };
 
-const countAndSay = (n) => {
+const countAndSay = n => {
   if (n == '1') return '1';
     
   let str = `11`;
