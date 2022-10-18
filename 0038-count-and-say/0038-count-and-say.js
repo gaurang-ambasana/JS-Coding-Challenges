@@ -17,9 +17,11 @@ const helper = (str) => {
 };
 
 const countAndSay = (n) => {
-  let str = `1`;
+  if (n == '1') return '1';
+    
+  let str = `11`;
 
-  for (let i = 1; i < n; i++) 
+  for (let i = 2; i < n; i++) 
       str = helper(str);
 
   return str;
