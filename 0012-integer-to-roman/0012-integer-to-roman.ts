@@ -1,14 +1,27 @@
 function intToRoman(num: number): string {
-    const result: Array<string> = [];
+  const result: Array<string> = [];
 
-	const roman: Array<string> = [`M`, `CM`, `D`, `CD`, `C`, `XC`, `L`, `XL`, `X`, `IX`, `V`, `IV`, `I`];
-	const values: Array<number> = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  const roman: Array<Array<string | number>> = [
+    ["M", 1000],
+    ["CM", 900],
+    ["D", 500],
+    ["CD", 400],
+    ["C", 100],
+    ["XC", 90],
+    ["L", 50],
+    ["XL", 40],
+    ["X", 10],
+    ["IX", 9],
+    ["V", 5],
+    ["IV", 4],
+    ["I", 1],
+  ];
 
-	for (let i = 0; num > 0; i++)
-		while (num >= values[i]) {
-			num -= values[i];
-			result.push(roman[i]);
-		}
+  for (let i = 0; num > 0; i++)
+    while (num >= roman[i][1]) {
+      num -= <number>roman[i][1];
+      result.push(<string>roman[i][0]);
+    }
 
-	return result.join(``);    
+  return result.join(``);
 }
