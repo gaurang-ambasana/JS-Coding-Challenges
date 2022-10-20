@@ -1,4 +1,4 @@
-function intToRoman(num: number): string {
+var intToRoman: Function = (num: number): string => {
   const result: Array<string> = [];
 
   const roman: Array<Array<string | number>> = [
