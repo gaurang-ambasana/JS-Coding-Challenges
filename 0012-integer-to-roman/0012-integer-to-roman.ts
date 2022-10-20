@@ -17,10 +17,10 @@ var intToRoman: Function = (num: number): string => {
     ["I", 1],
   ];
 
-  for (let i = 0; num > 0; i++)
-    while (num >= roman[i][1]) {
-      num -= <number>roman[i][1];
-      result.push(<string>roman[i][0]);
+  for (let x = 0; num > 0; x++)
+    while (num >= roman[x][1]) {
+      num -= <number>roman[x][1];
+      result.push(<string>roman[x][0]);
     }
 
   return result.join(``);
