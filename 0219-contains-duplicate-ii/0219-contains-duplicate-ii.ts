@@ -7,4 +7,4 @@ function containsNearbyDuplicate(nums: number[], k: number): boolean {
         else table[nums[i]] = i;
     
     return false;
-};
+}
