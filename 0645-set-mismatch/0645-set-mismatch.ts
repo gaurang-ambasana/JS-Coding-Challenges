@@ -5,4 +5,4 @@ function findErrorNums(nums: number[]): number[] {
     const missing: number = sum - <number>Array.from(new Set(nums)).reduce((sum, n) => sum + n, 0);
     
     return [duplicateNum, missing];
-};
+}
