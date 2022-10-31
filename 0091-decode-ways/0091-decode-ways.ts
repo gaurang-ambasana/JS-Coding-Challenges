@@ -2,7 +2,7 @@ function numDecodings(s: string): number {
     const dp: Array<number> = Array(s.length + 1).fill(0);
     
     dp[0] = 1;
-    dp[1] = s[0] === '0' ? 0 : 1;
+    dp[1] = s[0] === `0` ? 0 : 1;
     
     for (let i = 2, n = s.length + 1; i < n; i++) {
         const oneDigit = parseInt(s.substring(i - 1, i));
