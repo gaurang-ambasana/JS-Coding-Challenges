@@ -1,24 +1,24 @@
 class MedianFinder {
-    finder: Array<number>;
+    arr: Array<number>;
 
     constructor() {
-        this.finder = [];
+        this.arr = [];
     }
 
     addNum(num: number): void {
-        const len = this.finder.length;
+        const len = this.arr.length;
         
-        if (len === 0 || this.finder[len - 1] <= num)
-            this.finder.push(num);
-        else this.finder.splice(this.finder.findIndex(n => n > num), 0, num);
+        if (len === 0 || this.arr[len - 1] <= num)
+            this.arr.push(num);
+        else this.arr.splice(this.arr.findIndex(n => n > num), 0, num);
     }
 
     findMedian(): number {
-        const len = this.finder.length;
+        const len = this.arr.length;
         const mid = Math.floor(len / 2);
         
         if (len % 2)
-            return this.finder[mid];
-        else return (this.finder[mid - 1] + this.finder[mid]) / 2;
+            return this.arr[mid];
+        else return (this.arr[mid - 1] + this.arr[mid]) / 2;
     }
 }
