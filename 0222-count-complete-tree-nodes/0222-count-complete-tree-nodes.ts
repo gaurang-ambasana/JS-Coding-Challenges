@@ -2,7 +2,7 @@ function countNodes(root: TreeNode | null): number {
     let count: number = 0;
     
     if (root !== null) {
-        count++;
+        count += 1;
         
         const { left, right } = root;
         
