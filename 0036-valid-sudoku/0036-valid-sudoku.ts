@@ -1,4 +1,4 @@
-const isValidSudoku = (board: string[][]): boolean => {
+function isValidSudoku(board: string[][]): boolean {
     for (let i = 0; i < 9; i++) {
         const set = new Set<string>();
         for (let j = 0; j < 9; j++) {
