@@ -2,10 +2,9 @@ function sumSubarrayMins(arr: number[]): number {
     let sum = 0;
 
     for (let start = 0, n = arr.length; start < n; start++) {
-        let currentMin = arr[start];
-        sum += currentMin;
+        let currentMin = Infinity;
         
-        for (let i = start + 1; i < n; i++) {
+        for (let i = start; i < n; i++) {
             currentMin = Math.min(arr[i], currentMin);
             sum += currentMin;
         }
