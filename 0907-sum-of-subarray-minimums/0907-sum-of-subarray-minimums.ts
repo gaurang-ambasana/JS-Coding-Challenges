@@ -5,7 +5,8 @@ function sumSubarrayMins(arr: Array<number>): number {
         let currentMin = Infinity;
         
         for (let i = start; i < n; i++) {
-            currentMin = Math.min(arr[i], currentMin);
+            if (arr[i] < currentMin)
+                currentMin = arr[i];
             sum += currentMin;
         }
     }
