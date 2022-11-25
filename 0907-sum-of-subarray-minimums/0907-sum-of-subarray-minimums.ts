@@ -1,4 +1,4 @@
-function sumSubarrayMins(arr: number[]): number {
+function sumSubarrayMins(arr: Array<number>): number {
     let sum = 0;
 
     for (let start = 0, n = arr.length; start < n; start++) {
