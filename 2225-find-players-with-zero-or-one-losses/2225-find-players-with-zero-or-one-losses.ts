@@ -9,8 +9,7 @@ function findWinners(matches: number[][]): number[][] {
         else losers[loser] = 1;
     }
     
-    const zeroLose = Array.from(winners).sort((a, b) => a - b);
-    const oneLose = Object.keys(losers).map(Number).filter(l => losers[l] == 1).sort((a, b) => a - b);
+    const zeroLose = Array.from(winners).sort((a, b) => a - b), oneLose = Object.keys(losers).map(Number).filter(l => losers[l] == 1).sort((a, b) => a - b);
 
     return [zeroLose, oneLose];
 }
