@@ -6,23 +6,14 @@ class RandomizedSet {
     }
 
     insert(val: number): boolean {
-        if (this.set.has(val))
-            return false;
-        
-        this.set.add(val);
-        return true;
+        return this.set.size !== this.set.add(val).size;
     }
 
     remove(val: number): boolean {
-        if (!this.set.has(val))
-            return false;
-        
-        this.set.delete(val);
-        return true;
+        return this.set.delete(val);
     }
 
     getRandom(): number {
-        const idx = Math.floor(Math.random() * this.set.size);
-        return Array.from(this.set)[idx];
+        return Array.from(this.set)[Math.floor(Math.random() * this.set.size)];
     }
 }
