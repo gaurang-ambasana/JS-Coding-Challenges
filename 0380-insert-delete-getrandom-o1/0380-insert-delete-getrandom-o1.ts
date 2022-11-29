@@ -22,6 +22,7 @@ class RandomizedSet {
     }
 
     getRandom(): number {
-        return [...this.set][Math.floor(Math.random() * this.set.size)];
+        const idx = Math.floor(Math.random() * this.set.size);
+        return Array.from(this.set)[idx];
     }
 }
