@@ -22,6 +22,6 @@ class RandomizedSet {
     }
 
     getRandom(): number {
-        return Array.from(this.set)[Math.floor(Math.random() * this.set.size)];
+        return [...this.set][Math.floor(Math.random() * this.set.size)];
     }
 }
