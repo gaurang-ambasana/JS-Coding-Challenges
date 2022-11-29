@@ -14,12 +14,11 @@ class RandomizedSet {
     }
 
     remove(val: number): boolean {
-        if (this.set.has(val)) {
-            this.set.delete(val);
-            return true;
-        }
+        if (!this.set.has(val))
+            return false;
         
-        return false;
+        this.set.delete(val);
+        return true;
     }
 
     getRandom(): number {
