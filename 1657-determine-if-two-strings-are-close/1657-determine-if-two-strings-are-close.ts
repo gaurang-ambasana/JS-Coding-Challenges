@@ -1,4 +1,4 @@
-function closeStrings(word1: string, word2: string): boolean {
+var closeStrings = (word1: string, word2: string): boolean => {
     if (word1.length !== word2.length) return false;
 
     const getPattern = (s: string): { [index: string]: number } => s.split(``).reduce((f, n) => (f[n] = (f[n] ?? 0) + 1, f), {});
