@@ -6,10 +6,10 @@ function minimumAverageDifference(nums: number[]): number {
     for (let i = 0, n = nums.length; i < n; i++) {
         runningSum += nums[i];
         
-        const rightSum = total - runningSum;
-        const leftAvg = Math.floor(runningSum / (i + 1));
-        const rightAvg = Math.floor(rightSum / ((i === n - 1) ? 1 : n - i - 1));
-        const diff = Math.abs(leftAvg - rightAvg);
+        const rightSum = total - runningSum, 
+              leftAvg = Math.floor(runningSum / (i + 1)),
+              rightAvg = Math.floor(rightSum / ((i === n - 1) ? 1 : n - i - 1)),
+              diff = Math.abs(leftAvg - rightAvg);
 
         if (diff < minDiff) {
             minDiff = diff;
