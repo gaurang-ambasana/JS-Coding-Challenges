@@ -1,5 +1,5 @@
 function minimumAverageDifference(nums: number[]): number {
-    let ans: number, minDiff = Infinity, runningSum = 0;
+    let ans = -1, minDiff = Infinity, runningSum = 0;
 
     const total = nums.reduce((sum, n) => sum + n, 0);
 
