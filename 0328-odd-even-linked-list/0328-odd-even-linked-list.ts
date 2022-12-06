@@ -22,7 +22,8 @@ function oddEvenList(head: ListNode | null): ListNode | null {
         i++;
     }
 
-    if (evenList) tmp.next = evenList;
+    if (evenList)
+        tmp.next = evenList;
 
     return oddList;
 }
