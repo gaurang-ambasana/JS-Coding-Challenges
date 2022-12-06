@@ -1,6 +1,5 @@
 function oddEvenList(head: ListNode | null): ListNode | null {
-    if (!head || !head.next)
-        return head;
+    if (!head || !head.next) return head;
 
     let { val, next: { val: val1, next: node }} = head;
 
