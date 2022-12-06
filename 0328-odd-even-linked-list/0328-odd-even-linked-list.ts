@@ -2,10 +2,7 @@ function oddEvenList(head: ListNode | null): ListNode | null {
     if (!head || !head.next)
         return head;
 
-    let { val, next: node } = head;
-    const { val: val1, next } = node;
-
-    node = next;
+    let { val, next: { val: val1, next: node }} = head;
 
     const oddList = new ListNode(val), evenList = new ListNode(val1);
     let tmp = oddList, tmp1 = evenList, i = 2;
