@@ -1,42 +1,31 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
-
 function oddEvenList(head: ListNode | null): ListNode | null {
-    if (!head || !head.next) return head;
+    if (!head || !head.next)
+        return head;
 
     let { val, next: node } = head;
+    const { val: val1, next } = node;
 
-    const arr: Array<number> = [val];
+    node = next;
+
+    const oddList = new ListNode(val), evenList = new ListNode(val1);
+    let tmp = oddList, tmp1 = evenList, i = 2;
 
     while (node) {
         const { val, next } = node;
-        arr.push(val);
-        node = next;
-    }
 
-    const list = new ListNode(val), list1 = new ListNode(arr[1]);
-    let tmp = list, tmp1 = list1;
-
-    for (let i = 2, n = arr.length; i < n; i++) {
         if (i % 2) {
-            tmp1.next = new ListNode(arr[i]);
+            tmp1.next = new ListNode(val);
             tmp1 = tmp1.next;
         } else {
-            tmp.next = new ListNode(arr[i]);
+            tmp.next = new ListNode(val);
             tmp = tmp.next;
         }
+        
+        node = next;
+        i++;
     }
 
-    list1 && (tmp.next = list1);
+    evenList && (tmp.next = evenList);
 
-    return list;
+    return oddList;
 }
