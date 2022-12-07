@@ -8,9 +8,8 @@ function rangeSumBST(root: TreeNode | null, low: number, high: number): number {
             sum += val;
             left && traverse(left);
             right && traverse(right);
-        }
-        else if (val < low) right && traverse(right)
-        else left && traverse(left)
+        } else if (val < low) right && traverse(right);
+        else left && traverse(left);
 
     }
 
