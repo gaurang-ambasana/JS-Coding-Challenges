@@ -15,4 +15,4 @@ function isUnivalTree(root: TreeNode | null): boolean {
     }
 
     return traverse(left) && traverse(right);
-};
+}
