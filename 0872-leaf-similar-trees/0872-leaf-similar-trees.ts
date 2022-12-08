@@ -1,5 +1,5 @@
 function leafSimilar(root1: TreeNode | null, root2: TreeNode | null): boolean {
-    const arr: number[] = [];
+    const arr = [];
 
     function traverse(node: TreeNode): void {
         const { val, left, right } = node;
