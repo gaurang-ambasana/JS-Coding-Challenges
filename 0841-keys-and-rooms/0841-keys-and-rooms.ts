@@ -3,7 +3,8 @@ function canVisitAllRooms(rooms: number[][]): boolean {
 
     while (keys.size > 0) {
         for (const key of keys)
-            rooms[key].forEach(k => keys.add(k));
+            for (const k of rooms[key])
+                keys.add(k);
 
         for (const key of keys) {
             visited.add(key);
