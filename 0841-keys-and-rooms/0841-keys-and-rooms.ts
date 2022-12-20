@@ -11,5 +11,5 @@ function canVisitAllRooms(rooms: number[][]): boolean {
         }
     }
 
-    return visited.size === rooms.length;
+    return rooms.length === visited.size;
 }
