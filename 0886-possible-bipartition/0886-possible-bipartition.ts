@@ -1,4 +1,4 @@
-function possibleBipartition(n: number, dislikes: number[][]): boolean {
+const possibleBipartition = (n: number, dislikes: number[][]): boolean => {
     if (dislikes.length === 0)
         return true;
 
