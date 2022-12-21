@@ -1,5 +1,6 @@
 function possibleBipartition(n: number, dislikes: number[][]): boolean {
-    if (dislikes.length === 0) return true;
+    if (dislikes.length === 0)
+        return true;
 
     const group1 = new Set(), group2 = new Set(), [disliker, person] = dislikes.shift();
     
