@@ -1,1 +1,1 @@
-const findMinArrowShots = (points: number[][]): number => points.sort(([start1,], [start2,]) => start1 - start2).reduce(([ans, lastPoint], [start, stop]) => start > lastPoint ? [++ans, stop] : [ans, Math.min(lastPoint, stop)], [0, -Infinity])[0];
+const findMinArrowShots = (points: number[][]): number => points.sort(([s1,], [s2,]) => s1 - s2).reduce(([ans, lastPoint], [start, stop]) => start > lastPoint ? [++ans, stop] : [ans, Math.min(lastPoint, stop)], [0, -Infinity])[0];
