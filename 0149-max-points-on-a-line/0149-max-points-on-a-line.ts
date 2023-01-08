@@ -14,10 +14,9 @@ function maxPoints(points: number[][]): number {
     }
 
     for (let i = 1, n = points.length; i < n; i++) {
-        const lines: { [index: string]: number } = {};
         let max = 0;
 
-        const [x1, y1] = points[i];
+        const [x1, y1] = points[i], lines: { [index: string]: number } = {};
 
         for (let j = 0; j < i; j++) {
             const [x2, y2] = points[j];
