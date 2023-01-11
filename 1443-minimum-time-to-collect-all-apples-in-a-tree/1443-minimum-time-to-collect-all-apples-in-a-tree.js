@@ -11,11 +11,8 @@ const minTime = (n, edges, hasApple) => {
     for (let i = 0; i < n - 1; i++) {
         const [from, to] = edges[i];
         
-        if (!map.has(from))
-            map.set(from, new Set());
-
-        if (!map.has(to))
-            map.set(to, new Set());
+        !map.has(from) && map.set(from, new Set());
+        !map.has(to) && map.set(to, new Set());
 
         map.get(from).add(to);
         map.get(to).add(from);
