@@ -5,20 +5,21 @@
  * @return {number}
  */
 const minTime = (n, edges, hasApple) => {
-    const map = edges.reduce((tree, [from, to]) => {
-        if (!tree.has(from))
-            tree.set(from, new Set());
-
-        if (!tree.has(to))
-            tree.set(to, new Set());
-
-        tree.get(from).add(to);
-        tree.get(to).add(from);
-
-        return tree;
-    }, new Map());
-
+    const map = new Map();
     let ans = 0;
+    
+    for (let i = 0; i < n - 1; i++) {
+        const [from, to] = edges[i];
+        
+        if (!map.has(from))
+            map.set(from, new Set());
+
+        if (!map.has(to))
+            map.set(to, new Set());
+
+        map.get(from).add(to);
+        map.get(to).add(from);
+    }
 
     function traverse(node, parent) {
         let flag = false;
