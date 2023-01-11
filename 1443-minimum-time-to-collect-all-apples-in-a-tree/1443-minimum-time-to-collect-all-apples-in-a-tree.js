@@ -4,7 +4,7 @@
  * @param {boolean[]} hasApple
  * @return {number}
  */
-var minTime = (n, edges, hasApple) => {
+const minTime = (n, edges, hasApple) => {
     const map = edges.reduce((tree, [from, to]) => {
         if (!tree.has(from))
             tree.set(from, new Set());
