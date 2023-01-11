@@ -37,7 +37,8 @@ const minTime = (n, edges, hasApple) => {
                 flag = tmp || flag;
             }
 
-        if (hasApple[node]) return true;
+        if (hasApple[node]) 
+            return true;
         else return flag;
     }
 
