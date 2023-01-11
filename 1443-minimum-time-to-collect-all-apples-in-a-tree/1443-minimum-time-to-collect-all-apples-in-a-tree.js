@@ -4,7 +4,7 @@
  * @param {boolean[]} hasApple
  * @return {number}
  */
-const minTime = (n, edges, hasApple) => {
+var minTime = (n, edges, hasApple) => {
     const map = new Map();
     let ans = 0;
     
