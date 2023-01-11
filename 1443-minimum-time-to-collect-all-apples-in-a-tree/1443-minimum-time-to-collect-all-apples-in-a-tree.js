@@ -25,7 +25,7 @@ const minTime = (n, edges, hasApple) => {
         let flag = false;
         const children = map.get(node);
 
-        for (const child of children) {
+        for (const child of children)
             if (child !== parent) {
                 ans++;
                 
@@ -36,7 +36,6 @@ const minTime = (n, edges, hasApple) => {
 
                 flag = tmp || flag;
             }
-        }
 
         if (hasApple[node]) return true;
         else return flag;
