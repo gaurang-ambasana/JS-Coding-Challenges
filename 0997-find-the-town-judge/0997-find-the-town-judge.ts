@@ -1,4 +1,4 @@
-function findJudge(n: number, trust: number[][]): number {
+var findJudge = (n: number, trust: number[][]): number => {
   if (n === 1) return 1;
 
   const map = new Map<number, Set<number>>();
