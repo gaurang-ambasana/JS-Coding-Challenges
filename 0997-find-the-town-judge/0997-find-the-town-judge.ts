@@ -3,7 +3,7 @@ var findJudge = (n: number, trust: number[][]): number => {
 
   const map = new Map<number, Set<number>>();
 
-  for (let i = 1; i < n + 1; i++) map.set(i, new Set());
+  for (let i = 1; i <= n; i++) map.set(i, new Set());
 
   for (let i = 0, n = trust.length; i < n; i++)
     map.get(trust[i][0]).add(trust[i][1]);
