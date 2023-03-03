@@ -5,9 +5,9 @@ function compress(chars: string[]): number {
     for (let i = 1, n = chars.length + 1; i < n; i++) {
         const curr = chars.shift();
 
-        if (prev === curr) {
+        if (prev === curr)
             count++;
-        } else  {
+        else {
             if (count === 1) {
                 chars.push(prev);
             } else {
