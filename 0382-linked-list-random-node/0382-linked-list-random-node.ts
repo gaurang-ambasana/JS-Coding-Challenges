@@ -2,8 +2,8 @@ class Solution {
     arr: Array<number>;
 
     constructor(head: ListNode | null) {
-        this.arr = [];
-        let node = head;
+        let { val, next: node } = head;
+        this.arr = [val];
 
         while (node) {
             const { val, next } = node;
