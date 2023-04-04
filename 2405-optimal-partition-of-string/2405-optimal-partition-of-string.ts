@@ -1,13 +1,13 @@
 function partitionString(s: string): number {
     let ans = 0, tmp = new Set<string>();
 
-    for (let i = 0, n = s.length; i < n; i++) {
-        if (tmp.has(s[i])) {
+    for (const char of s) {
+        if (tmp.has(char)) {
             ans++;
             tmp.clear();
         }
 
-        tmp.add(s[i]);
+        tmp.add(char);
     }
 
     return ++ans;
