@@ -1,0 +1,1 @@
+const removeStars = (s: string): string => s.split(``).reduce((ans, c) => c !== `*` ? ans.concat(c) : ans.substring(0, ans.length - 1), ``);
