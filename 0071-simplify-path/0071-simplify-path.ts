@@ -1,7 +1,5 @@
 function simplifyPath(path: string): string {
-    const stack = [];
-
-    const paths = path.split('/');
+    const stack = [], paths = path.split(`/`);
 
     for (const dir of paths) {
         if (dir === '.') continue;
