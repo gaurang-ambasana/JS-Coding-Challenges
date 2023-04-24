@@ -7,7 +7,6 @@ function* fibGenerator(): Generator<number, any, number> {
     while (true) {
         const c = a + b;
         [a, b] = [b, c];
-        
         yield c;
     }
 }
