@@ -1,14 +1,19 @@
 function jsonStringify(object: any): string {
     const checkTypes = (val: any): string => {
-        if (typeof val !== `object`)
+        if (typeof val !== `object`) {
             if (typeof val === `string`) 
                 return `"${val}"`;
-            else return `${val}`;
-        else if (val === null)
+            
+            return `${val}`;
+        }
+        
+        if (val === null)
             return `null`;
-        else if (Array.isArray(val))
+        
+        if (Array.isArray(val))
             return `${stringifyArr(val)}`;
-        else return `${jsonStringify(val)}`;
+        
+        return `${jsonStringify(val)}`;
     }
 
     const stringifyArr = (arr: any[]): string => arr.length > 0 ? arr.reduce((ans, e) => ans += `${checkTypes(e)},`, `[`).slice(0, -1) + `]` : `[]`;
