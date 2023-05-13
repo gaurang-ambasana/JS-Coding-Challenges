@@ -6,9 +6,8 @@ function memoize(fn: Fn): Fn {
     return (...args) => {
         const key = args.join();
 
-        if (cache.has(key)) {
+        if (cache.has(key))
             return cache.get(key);
-        }
 
         const ans = fn(...args);
         cache.set(key, ans);
