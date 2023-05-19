@@ -7,7 +7,8 @@ class TimeLimitedCache {
 
     set(key: number, value: number, duration: number): boolean {
         if (this.cache.has(key)) {
-            clearTimeout(this.cache.get(key).timer);
+            const { timer } = this.cache.get(key);
+            clearTimeout(timer);
             
             this.cache.set(key, {
                 value, 
