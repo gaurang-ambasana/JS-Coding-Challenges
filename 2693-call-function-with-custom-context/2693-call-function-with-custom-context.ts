@@ -6,5 +6,7 @@ declare global {
 
 Function.prototype.callPolyfill = function(context, ...args): any {
     Object.prototype["fn"] = this;
-    return context.fn(...args);
+    const res = context.fn(...args);
+    delete Object.prototype["fn"];
+    return res;
 }
