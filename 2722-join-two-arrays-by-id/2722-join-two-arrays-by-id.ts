@@ -3,7 +3,7 @@ function join(arr1: any[], arr2: any[]): any[] {
         if (!(id in a)) {
             a[id] = {};
         }
-        a[id] = { ...rest };
+        a[id] = { ...a[id], ...rest };
         return a;
     }, {});
 
