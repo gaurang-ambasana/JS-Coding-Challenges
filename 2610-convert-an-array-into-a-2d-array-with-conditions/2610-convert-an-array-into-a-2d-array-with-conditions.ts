@@ -13,4 +13,4 @@ function findMatrix(nums: number[]): number[][] {
     }
 
     return ans;
-};
+}
