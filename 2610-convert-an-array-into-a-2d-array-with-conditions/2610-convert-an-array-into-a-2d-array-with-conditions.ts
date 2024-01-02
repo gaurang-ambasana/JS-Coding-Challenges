@@ -1,6 +1,6 @@
 function findMatrix(nums: number[]): number[][] {
     const ans = [];
-    const counter = new Map<number, number>();
+    const counter = new Map();
 
     for (let i = 0, n = nums.length; i < n; i++) {
         const num = nums[i];
